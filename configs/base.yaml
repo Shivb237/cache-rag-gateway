@@ -1,0 +1,17 @@
+seed: 42
+llm:
+  provider: ollama
+  model: qwen3:4b-instruct
+  modelDigest: 0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0  # pulled 2026-10-06; checked by scripts/smoke-llm.ts
+  temperature: 0
+  spendCapUsd: 0
+embedding:
+  model: BAAI/bge-small-en-v1.5
+  revision: TBD-pinned-in-milestone-1  # exact HF commit hash
+retrieval:
+  topK: 5
+caches:
+  exact: { enabled: true, ttlSeconds: 3600 }
+  semantic: { enabled: true, threshold: 0.9 }  # placeholder; the real value comes from the M4 sweep
+  retrieval: { enabled: true, ttlSeconds: 3600 }
+  promptPrefix: { enabled: true }

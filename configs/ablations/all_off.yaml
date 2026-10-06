@@ -1,0 +1,5 @@
+caches:
+  exact: { enabled: false }
+  semantic: { enabled: false }
+  retrieval: { enabled: false }
+  promptPrefix: { enabled: false }

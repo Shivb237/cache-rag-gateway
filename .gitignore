@@ -1,0 +1,26 @@
+# Secrets - never commit
+.env
+.env.*
+!.env.example
+
+node_modules/
+dist/
+
+# Downloaded datasets and model weights (fetched by script)
+data/raw/*
+!data/raw/.gitkeep
+.cache/
+
+# Scratch runs (curated runs are committed explicitly)
+runs/tmp/
+*.sqlite
+*.sqlite-*
+
+.DS_Store
+.vscode/
+.idea/
+*.log
+
+CLAUDE.md
+.impeccable/
+docs/

@@ -1,0 +1,8 @@
+# Any hosted OpenAI-compatible API. Put the key in .env as OPENROUTER_API_KEY.
+llm:
+  provider: openai-compatible
+  model: provider/model-name
+  baseUrl: https://openrouter.ai/api/v1
+  apiKeyEnv: OPENROUTER_API_KEY
+  spendCapUsd: 2
+  pricing: { inputPerMTok: 0, outputPerMTok: 0 }  # fill in the model's real prices before trusting cost numbers
