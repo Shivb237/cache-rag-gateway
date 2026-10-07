@@ -1,0 +1,8 @@
+# Retrieval cache on (similarity threshold 0.65) with the prefix cache and canonical passage order.
+caches:
+  exact: { enabled: false }
+  semantic: { enabled: false }
+  retrieval: { enabled: true, threshold: 0.65 }
+  promptPrefix: { enabled: true }
+prompt:
+  passageOrder: sorted

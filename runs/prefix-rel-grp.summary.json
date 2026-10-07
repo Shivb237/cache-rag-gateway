@@ -1,0 +1,104 @@
+{
+  "name": "prefix-rel-grp",
+  "when": "2026-10-06T20:35:51.173Z",
+  "requests": 100,
+  "workload": {
+    "kind": "prefix",
+    "questions": 100,
+    "order": "grouped",
+    "paragraphs": 20
+  },
+  "warmupCalls": 1,
+  "wallClockSecs": 356.2,
+  "metrics": {
+    "exactMatch": 0.54,
+    "f1": 0.7393,
+    "recallAt1": 0.84,
+    "recallAt5": 0.96,
+    "cacheHitRate": 0,
+    "hitsByLayer": {
+      "exact": 0,
+      "semantic": 0
+    },
+    "llmCalls": 100,
+    "byKind": {
+      "original": {
+        "requests": 100,
+        "hits": 0,
+        "hitRate": 0,
+        "wrongServed": 0,
+        "wrongServedRate": 0,
+        "f1": 0.7393
+      }
+    },
+    "latencyMs": {
+      "p50": 3666.1,
+      "p95": 5933.6,
+      "p99": 6597.6
+    },
+    "latencyMsHitsOnly": null,
+    "latencyMsMissesOnly": {
+      "p50": 3666.1,
+      "p95": 5933.6
+    },
+    "promptEvalMs": {
+      "mean": 3255,
+      "p50": 3426,
+      "p95": 5553,
+      "under1s": 0.09
+    },
+    "ttftMs": {
+      "p50": 3475,
+      "p95": 5658
+    },
+    "meanPromptTokens": 939,
+    "meanCompletionTokens": 7.9,
+    "totalTokensProcessed": 94664,
+    "sameAnswerAsEarlierRun": null,
+    "costUsd": 0
+  },
+  "setup": {
+    "seed": 42,
+    "llm": {
+      "provider": "ollama",
+      "model": "qwen3:4b-instruct",
+      "modelDigest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+      "temperature": 0,
+      "spendCapUsd": 0
+    },
+    "embedding": {
+      "model": "BAAI/bge-small-en-v1.5",
+      "revision": "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a"
+    },
+    "topK": 5,
+    "caches": {
+      "exact": {
+        "enabled": false,
+        "ttlSeconds": 3600
+      },
+      "semantic": {
+        "enabled": false,
+        "threshold": 0.9,
+        "ttlSeconds": 3600
+      },
+      "retrieval": {
+        "enabled": false,
+        "ttlSeconds": 3600
+      },
+      "promptPrefix": {
+        "enabled": true
+      }
+    },
+    "answerVersion": "5fe9acd63ef3dc2127da2e6b09790de522942206a603bdc7505ac056513b9dbc",
+    "subsetSha256": "b179a40cb8675ce513ef1645b2dd63625c4221d2faf9b01242fea37eb14efe18",
+    "indexMeta": {
+      "model": "BAAI/bge-small-en-v1.5",
+      "revision": "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a",
+      "subsetSha256": "b179a40cb8675ce513ef1645b2dd63625c4221d2faf9b01242fea37eb14efe18",
+      "dim": 384,
+      "count": 500
+    },
+    "node": "v25.9.0",
+    "comparedTo": null
+  }
+}

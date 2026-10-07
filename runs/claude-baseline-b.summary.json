@@ -1,0 +1,114 @@
+{
+  "name": "claude-baseline-b",
+  "when": "2026-10-07T02:33:25.678Z",
+  "requests": 200,
+  "workload": {
+    "kind": "repeat",
+    "uniqueQuestions": 200,
+    "repeats": 0,
+    "repeatRateRequested": 0,
+    "repeatRateRealized": 0
+  },
+  "warmupCalls": 1,
+  "wallClockSecs": 293.8,
+  "metrics": {
+    "exactMatch": 0.62,
+    "f1": 0.8201,
+    "recallAt1": 0.82,
+    "recallAt5": 0.965,
+    "cacheHitRate": 0,
+    "retrievalCacheHitRate": null,
+    "hitsByLayer": {
+      "exact": 0,
+      "semantic": 0
+    },
+    "llmCalls": 200,
+    "byKind": {
+      "original": {
+        "requests": 200,
+        "hits": 0,
+        "hitRate": 0,
+        "wrongServed": 0,
+        "wrongServedRate": 0,
+        "f1": 0.8201
+      }
+    },
+    "latencyMs": {
+      "p50": 1458.7,
+      "p95": 1837,
+      "p99": 1938.7
+    },
+    "latencyMsHitsOnly": null,
+    "latencyMsMissesOnly": {
+      "p50": 1458.7,
+      "p95": 1837
+    },
+    "promptEvalMs": null,
+    "ttftMs": {
+      "p50": 1418,
+      "p95": 1636
+    },
+    "meanPromptTokens": 1413,
+    "meanCompletionTokens": 14.7,
+    "totalTokensProcessed": 285620,
+    "sameAnswerAsEarlierRun": null,
+    "costUsd": 0.5948,
+    "cachedPromptTokens": 0,
+    "cacheWriteTokens": 0
+  },
+  "setup": {
+    "seed": 42,
+    "llm": {
+      "provider": "anthropic",
+      "model": "claude-sonnet-5-5",
+      "modelDigest": null,
+      "temperature": 0,
+      "spendCapUsd": 8,
+      "pricing": {
+        "inputPerMTok": 2,
+        "outputPerMTok": 10,
+        "cacheWritePerMTok": 2.5,
+        "cacheReadPerMTok": 0.2
+      },
+      "options": {
+        "thinking": "between_tools",
+        "sendTemperature": false
+      }
+    },
+    "embedding": {
+      "model": "BAAI/bge-small-en-v1.5",
+      "revision": "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a"
+    },
+    "topK": 5,
+    "caches": {
+      "exact": {
+        "enabled": false,
+        "ttlSeconds": 3600
+      },
+      "semantic": {
+        "enabled": false,
+        "threshold": 0.9,
+        "ttlSeconds": 3600
+      },
+      "retrieval": {
+        "enabled": false,
+        "ttlSeconds": 3600,
+        "threshold": 0.85
+      },
+      "promptPrefix": {
+        "enabled": false
+      }
+    },
+    "answerVersion": "596db8bc44634597be184f3d6db3e8042f317cec825f5fa8ddf918a6cc6984e2",
+    "subsetSha256": "b179a40cb8675ce513ef1645b2dd63625c4221d2faf9b01242fea37eb14efe18",
+    "indexMeta": {
+      "model": "BAAI/bge-small-en-v1.5",
+      "revision": "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a",
+      "subsetSha256": "b179a40cb8675ce513ef1645b2dd63625c4221d2faf9b01242fea37eb14efe18",
+      "dim": 384,
+      "count": 500
+    },
+    "node": "v25.9.0",
+    "comparedTo": null
+  }
+}

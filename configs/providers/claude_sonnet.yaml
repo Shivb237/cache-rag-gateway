@@ -1,0 +1,10 @@
+# Claude Sonnet 5.5 through the Anthropic API. Put ANTHROPIC_API_KEY in .env (gitignored); never paste it in chat.
+# Newer Claude models reject temperature, so it is NOT sent (the base value of 0 is ignored by this provider).
+# Thinking is turned off with "between_tools" (cheaper, faster, and one less source of run-to-run variation).
+llm:
+  provider: anthropic
+  model: claude-sonnet-5-5
+  modelDigest: null
+  spendCapUsd: 21           # counted across ALL runs through .cache/spend-ledger.jsonl; raised 8 -> 15 -> 21 as phases were approved (user funded $25)
+  pricing: { inputPerMTok: 2, outputPerMTok: 10, cacheWritePerMTok: 2.5, cacheReadPerMTok: 0.2 }  # 5-minute cache: write 1.25x, read 0.1x
+  options: { thinking: between_tools, sendTemperature: false }

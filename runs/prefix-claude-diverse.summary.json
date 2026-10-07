@@ -1,0 +1,800 @@
+{
+  "name": "prefix-claude-diverse",
+  "when": "2026-10-07T07:52:03.921Z",
+  "workloadName": "diverse",
+  "control": "off",
+  "twin": "off-twin",
+  "reps": 1,
+  "requests": 100,
+  "workload": {
+    "original": 100
+  },
+  "arms": [
+    "off",
+    "cache-relevance",
+    "cache-sorted",
+    "sorted+retrieval-0.75",
+    "sorted+retrieval-0.65",
+    "off-twin"
+  ],
+  "costUsd": 2.0508555,
+  "setup": {
+    "seed": 42,
+    "llm": {
+      "provider": "anthropic",
+      "model": "claude-sonnet-5-5",
+      "modelDigest": null,
+      "temperature": 0,
+      "spendCapUsd": 21,
+      "pricing": {
+        "inputPerMTok": 2,
+        "outputPerMTok": 10,
+        "cacheWritePerMTok": 2.5,
+        "cacheReadPerMTok": 0.2
+      },
+      "options": {
+        "thinking": "between_tools",
+        "sendTemperature": false
+      }
+    },
+    "embedding": {
+      "model": "BAAI/bge-small-en-v1.5",
+      "revision": "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a"
+    },
+    "topK": 5,
+    "thresholds": {
+      "semantic": 0.9,
+      "retrieval": 0.75
+    },
+    "subsetSha256": "b179a40cb8675ce513ef1645b2dd63625c4221d2faf9b01242fea37eb14efe18",
+    "node": "v25.9.0"
+  },
+  "aggregate": {
+    "cache-relevance": {
+      "hitRate": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "retrievalReuse": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "modelCalls": {
+        "median": 100,
+        "min": 100,
+        "max": 100
+      },
+      "refusals": {
+        "median": 1,
+        "min": 1,
+        "max": 1
+      },
+      "cacheReadShare": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "cacheWriteShare": {
+        "median": 0.9814043930278759,
+        "min": 0.9814043930278759,
+        "max": 0.9814043930278759
+      },
+      "ttftP50": {
+        "median": 1216.15,
+        "min": 1216.15,
+        "max": 1216.15
+      },
+      "ttftP95": {
+        "median": 3884.15,
+        "min": 3884.15,
+        "max": 3884.15
+      },
+      "wrongServed": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "f1": {
+        "median": 0.821735,
+        "min": 0.821735,
+        "max": 0.821735
+      },
+      "em": {
+        "median": 0.64,
+        "min": 0.64,
+        "max": 0.64
+      },
+      "latencyP50": {
+        "median": 1397.87,
+        "min": 1397.87,
+        "max": 1397.87
+      },
+      "latencyP95": {
+        "median": 4098.98,
+        "min": 4098.98,
+        "max": 4098.98
+      },
+      "latencyP99": {
+        "median": 7275.04,
+        "min": 7275.04,
+        "max": 7275.04
+      },
+      "tokensIn": {
+        "median": 142453,
+        "min": 142453,
+        "max": 142453
+      },
+      "tokensOut": {
+        "median": 1197,
+        "min": 1197,
+        "max": 1197
+      },
+      "costUsd": {
+        "median": 0.36677799999999994,
+        "min": 0.36677799999999994,
+        "max": 0.36677799999999994
+      },
+      "disagreeWithControl": {
+        "median": 0.3,
+        "min": 0.3,
+        "max": 0.3
+      },
+      "hitRateByKind": {
+        "original": 0
+      }
+    },
+    "off": {
+      "hitRate": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "retrievalReuse": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "modelCalls": {
+        "median": 100,
+        "min": 100,
+        "max": 100
+      },
+      "refusals": {
+        "median": 1,
+        "min": 1,
+        "max": 1
+      },
+      "cacheReadShare": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "cacheWriteShare": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "ttftP50": {
+        "median": 1217.73,
+        "min": 1217.73,
+        "max": 1217.73
+      },
+      "ttftP95": {
+        "median": 3465.58,
+        "min": 3465.58,
+        "max": 3465.58
+      },
+      "wrongServed": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "f1": {
+        "median": 0.8183509999999998,
+        "min": 0.8183509999999998,
+        "max": 0.8183509999999998
+      },
+      "em": {
+        "median": 0.64,
+        "min": 0.64,
+        "max": 0.64
+      },
+      "latencyP50": {
+        "median": 1373.04,
+        "min": 1373.04,
+        "max": 1373.04
+      },
+      "latencyP95": {
+        "median": 3936.21,
+        "min": 3936.21,
+        "max": 3936.21
+      },
+      "latencyP99": {
+        "median": 4819.41,
+        "min": 4819.41,
+        "max": 4819.41
+      },
+      "tokensIn": {
+        "median": 141953,
+        "min": 141953,
+        "max": 141953
+      },
+      "tokensOut": {
+        "median": 1195,
+        "min": 1195,
+        "max": 1195
+      },
+      "costUsd": {
+        "median": 0.295856,
+        "min": 0.295856,
+        "max": 0.295856
+      },
+      "disagreeWithControl": {
+        "median": 0.21,
+        "min": 0.21,
+        "max": 0.21
+      },
+      "hitRateByKind": {
+        "original": 0
+      }
+    },
+    "sorted+retrieval-0.65": {
+      "hitRate": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "retrievalReuse": {
+        "median": 0.13,
+        "min": 0.13,
+        "max": 0.13
+      },
+      "modelCalls": {
+        "median": 100,
+        "min": 100,
+        "max": 100
+      },
+      "refusals": {
+        "median": 1,
+        "min": 1,
+        "max": 1
+      },
+      "cacheReadShare": {
+        "median": 0.03541817313835202,
+        "min": 0.03541817313835202,
+        "max": 0.03541817313835202
+      },
+      "cacheWriteShare": {
+        "median": 0.9459846532950484,
+        "min": 0.9459846532950484,
+        "max": 0.9459846532950484
+      },
+      "ttftP50": {
+        "median": 1236.29,
+        "min": 1236.29,
+        "max": 1236.29
+      },
+      "ttftP95": {
+        "median": 3421.38,
+        "min": 3421.38,
+        "max": 3421.38
+      },
+      "wrongServed": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "f1": {
+        "median": 0.774961,
+        "min": 0.774961,
+        "max": 0.774961
+      },
+      "em": {
+        "median": 0.58,
+        "min": 0.58,
+        "max": 0.58
+      },
+      "latencyP50": {
+        "median": 1432.65,
+        "min": 1432.65,
+        "max": 1432.65
+      },
+      "latencyP95": {
+        "median": 3807.76,
+        "min": 3807.76,
+        "max": 3807.76
+      },
+      "latencyP99": {
+        "median": 7485.28,
+        "min": 7485.28,
+        "max": 7485.28
+      },
+      "tokensIn": {
+        "median": 142441,
+        "min": 142441,
+        "max": 142441
+      },
+      "tokensOut": {
+        "median": 1225,
+        "min": 1225,
+        "max": 1225
+      },
+      "costUsd": {
+        "median": 0.35542450000000003,
+        "min": 0.35542450000000003,
+        "max": 0.35542450000000003
+      },
+      "disagreeWithControl": {
+        "median": 0.31,
+        "min": 0.31,
+        "max": 0.31
+      },
+      "hitRateByKind": {
+        "original": 0
+      }
+    },
+    "off-twin": {
+      "hitRate": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "retrievalReuse": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "modelCalls": {
+        "median": 100,
+        "min": 100,
+        "max": 100
+      },
+      "refusals": {
+        "median": 1,
+        "min": 1,
+        "max": 1
+      },
+      "cacheReadShare": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "cacheWriteShare": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "ttftP50": {
+        "median": 1218.86,
+        "min": 1218.86,
+        "max": 1218.86
+      },
+      "ttftP95": {
+        "median": 3319.66,
+        "min": 3319.66,
+        "max": 3319.66
+      },
+      "wrongServed": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "f1": {
+        "median": 0.8047009999999999,
+        "min": 0.8047009999999999,
+        "max": 0.8047009999999999
+      },
+      "em": {
+        "median": 0.62,
+        "min": 0.62,
+        "max": 0.62
+      },
+      "latencyP50": {
+        "median": 1413.91,
+        "min": 1413.91,
+        "max": 1413.91
+      },
+      "latencyP95": {
+        "median": 3785.85,
+        "min": 3785.85,
+        "max": 3785.85
+      },
+      "latencyP99": {
+        "median": 4146.92,
+        "min": 4146.92,
+        "max": 4146.92
+      },
+      "tokensIn": {
+        "median": 142253,
+        "min": 142253,
+        "max": 142253
+      },
+      "tokensOut": {
+        "median": 1220,
+        "min": 1220,
+        "max": 1220
+      },
+      "costUsd": {
+        "median": 0.29670599999999997,
+        "min": 0.29670599999999997,
+        "max": 0.29670599999999997
+      },
+      "disagreeWithControl": {
+        "median": 0.21,
+        "min": 0.21,
+        "max": 0.21
+      },
+      "hitRateByKind": {
+        "original": 0
+      }
+    },
+    "cache-sorted": {
+      "hitRate": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "retrievalReuse": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "modelCalls": {
+        "median": 100,
+        "min": 100,
+        "max": 100
+      },
+      "refusals": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "cacheReadShare": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "cacheWriteShare": {
+        "median": 0.9814043930278759,
+        "min": 0.9814043930278759,
+        "max": 0.9814043930278759
+      },
+      "ttftP50": {
+        "median": 1250.25,
+        "min": 1250.25,
+        "max": 1250.25
+      },
+      "ttftP95": {
+        "median": 3364.92,
+        "min": 3364.92,
+        "max": 3364.92
+      },
+      "wrongServed": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "f1": {
+        "median": 0.8382080000000001,
+        "min": 0.8382080000000001,
+        "max": 0.8382080000000001
+      },
+      "em": {
+        "median": 0.65,
+        "min": 0.65,
+        "max": 0.65
+      },
+      "latencyP50": {
+        "median": 1425.99,
+        "min": 1425.99,
+        "max": 1425.99
+      },
+      "latencyP95": {
+        "median": 3610.85,
+        "min": 3610.85,
+        "max": 3610.85
+      },
+      "latencyP99": {
+        "median": 4251.17,
+        "min": 4251.17,
+        "max": 4251.17
+      },
+      "tokensIn": {
+        "median": 142453,
+        "min": 142453,
+        "max": 142453
+      },
+      "tokensOut": {
+        "median": 1277,
+        "min": 1277,
+        "max": 1277
+      },
+      "costUsd": {
+        "median": 0.36757799999999996,
+        "min": 0.36757799999999996,
+        "max": 0.36757799999999996
+      },
+      "disagreeWithControl": {
+        "median": 0.27,
+        "min": 0.27,
+        "max": 0.27
+      },
+      "hitRateByKind": {
+        "original": 0
+      }
+    },
+    "sorted+retrieval-0.75": {
+      "hitRate": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "retrievalReuse": {
+        "median": 0.02,
+        "min": 0.02,
+        "max": 0.02
+      },
+      "modelCalls": {
+        "median": 100,
+        "min": 100,
+        "max": 100
+      },
+      "refusals": {
+        "median": 1,
+        "min": 1,
+        "max": 1
+      },
+      "cacheReadShare": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "cacheWriteShare": {
+        "median": 0.9814608746771925,
+        "min": 0.9814608746771925,
+        "max": 0.9814608746771925
+      },
+      "ttftP50": {
+        "median": 1152.11,
+        "min": 1152.11,
+        "max": 1152.11
+      },
+      "ttftP95": {
+        "median": 3464.68,
+        "min": 3464.68,
+        "max": 3464.68
+      },
+      "wrongServed": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "f1": {
+        "median": 0.787242,
+        "min": 0.787242,
+        "max": 0.787242
+      },
+      "em": {
+        "median": 0.61,
+        "min": 0.61,
+        "max": 0.61
+      },
+      "latencyP50": {
+        "median": 1420.8,
+        "min": 1420.8,
+        "max": 1420.8
+      },
+      "latencyP95": {
+        "median": 3843.39,
+        "min": 3843.39,
+        "max": 3843.39
+      },
+      "latencyP99": {
+        "median": 4965.89,
+        "min": 4965.89,
+        "max": 4965.89
+      },
+      "tokensIn": {
+        "median": 142887,
+        "min": 142887,
+        "max": 142887
+      },
+      "tokensOut": {
+        "median": 1262,
+        "min": 1262,
+        "max": 1262
+      },
+      "costUsd": {
+        "median": 0.368513,
+        "min": 0.368513,
+        "max": 0.368513
+      },
+      "disagreeWithControl": {
+        "median": 0.22,
+        "min": 0.22,
+        "max": 0.22
+      },
+      "hitRateByKind": {
+        "original": 0
+      }
+    }
+  },
+  "perRep": {
+    "cache-relevance": [
+      {
+        "requests": 100,
+        "hitRate": 0,
+        "retrievalReuse": 0,
+        "exactHits": 0,
+        "semanticHits": 0,
+        "modelCalls": 100,
+        "refusals": 1,
+        "cacheReadShare": 0,
+        "cacheWriteShare": 0.9814043930278759,
+        "ttftP50": 1216.15,
+        "ttftP95": 3884.15,
+        "wrongServed": 0,
+        "f1": 0.821735,
+        "em": 0.64,
+        "latencyP50": 1397.87,
+        "latencyP95": 4098.98,
+        "latencyP99": 7275.04,
+        "missLatencyP50": 1397.87,
+        "tokensIn": 142453,
+        "tokensOut": 1197,
+        "costUsd": 0.36677799999999994,
+        "hitRateByKind": {
+          "original": 0
+        },
+        "disagreeWithTwin": 0.3
+      }
+    ],
+    "off": [
+      {
+        "requests": 100,
+        "hitRate": 0,
+        "retrievalReuse": 0,
+        "exactHits": 0,
+        "semanticHits": 0,
+        "modelCalls": 100,
+        "refusals": 1,
+        "cacheReadShare": 0,
+        "cacheWriteShare": 0,
+        "ttftP50": 1217.73,
+        "ttftP95": 3465.58,
+        "wrongServed": 0,
+        "f1": 0.8183509999999998,
+        "em": 0.64,
+        "latencyP50": 1373.04,
+        "latencyP95": 3936.21,
+        "latencyP99": 4819.41,
+        "missLatencyP50": 1373.04,
+        "tokensIn": 141953,
+        "tokensOut": 1195,
+        "costUsd": 0.295856,
+        "hitRateByKind": {
+          "original": 0
+        },
+        "disagreeWithTwin": 0.21
+      }
+    ],
+    "sorted+retrieval-0.65": [
+      {
+        "requests": 100,
+        "hitRate": 0,
+        "retrievalReuse": 0.13,
+        "exactHits": 0,
+        "semanticHits": 0,
+        "modelCalls": 100,
+        "refusals": 1,
+        "cacheReadShare": 0.03541817313835202,
+        "cacheWriteShare": 0.9459846532950484,
+        "ttftP50": 1236.29,
+        "ttftP95": 3421.38,
+        "wrongServed": 0,
+        "f1": 0.774961,
+        "em": 0.58,
+        "latencyP50": 1432.65,
+        "latencyP95": 3807.76,
+        "latencyP99": 7485.28,
+        "missLatencyP50": 1432.65,
+        "tokensIn": 142441,
+        "tokensOut": 1225,
+        "costUsd": 0.35542450000000003,
+        "hitRateByKind": {
+          "original": 0
+        },
+        "disagreeWithTwin": 0.31
+      }
+    ],
+    "off-twin": [
+      {
+        "requests": 100,
+        "hitRate": 0,
+        "retrievalReuse": 0,
+        "exactHits": 0,
+        "semanticHits": 0,
+        "modelCalls": 100,
+        "refusals": 1,
+        "cacheReadShare": 0,
+        "cacheWriteShare": 0,
+        "ttftP50": 1218.86,
+        "ttftP95": 3319.66,
+        "wrongServed": 0,
+        "f1": 0.8047009999999999,
+        "em": 0.62,
+        "latencyP50": 1413.91,
+        "latencyP95": 3785.85,
+        "latencyP99": 4146.92,
+        "missLatencyP50": 1413.91,
+        "tokensIn": 142253,
+        "tokensOut": 1220,
+        "costUsd": 0.29670599999999997,
+        "hitRateByKind": {
+          "original": 0
+        },
+        "disagreeWithTwin": 0.21
+      }
+    ],
+    "cache-sorted": [
+      {
+        "requests": 100,
+        "hitRate": 0,
+        "retrievalReuse": 0,
+        "exactHits": 0,
+        "semanticHits": 0,
+        "modelCalls": 100,
+        "refusals": 0,
+        "cacheReadShare": 0,
+        "cacheWriteShare": 0.9814043930278759,
+        "ttftP50": 1250.25,
+        "ttftP95": 3364.92,
+        "wrongServed": 0,
+        "f1": 0.8382080000000001,
+        "em": 0.65,
+        "latencyP50": 1425.99,
+        "latencyP95": 3610.85,
+        "latencyP99": 4251.17,
+        "missLatencyP50": 1425.99,
+        "tokensIn": 142453,
+        "tokensOut": 1277,
+        "costUsd": 0.36757799999999996,
+        "hitRateByKind": {
+          "original": 0
+        },
+        "disagreeWithTwin": 0.27
+      }
+    ],
+    "sorted+retrieval-0.75": [
+      {
+        "requests": 100,
+        "hitRate": 0,
+        "retrievalReuse": 0.02,
+        "exactHits": 0,
+        "semanticHits": 0,
+        "modelCalls": 100,
+        "refusals": 1,
+        "cacheReadShare": 0,
+        "cacheWriteShare": 0.9814608746771925,
+        "ttftP50": 1152.11,
+        "ttftP95": 3464.68,
+        "wrongServed": 0,
+        "f1": 0.787242,
+        "em": 0.61,
+        "latencyP50": 1420.8,
+        "latencyP95": 3843.39,
+        "latencyP99": 4965.89,
+        "missLatencyP50": 1420.8,
+        "tokensIn": 142887,
+        "tokensOut": 1262,
+        "costUsd": 0.368513,
+        "hitRateByKind": {
+          "original": 0
+        },
+        "disagreeWithTwin": 0.22
+      }
+    ]
+  }
+}

@@ -7,6 +7,7 @@ export const ollama: ProviderFactory = ({ model, baseUrl }): LlmProvider => {
   const host = baseUrl ?? process.env.OLLAMA_HOST ?? "http://127.0.0.1:11434";
   return {
     name: "ollama",
+    cacheMode: "automatic",
     async *stream(req: ChatRequest, signal?: AbortSignal): AsyncGenerator<StreamEvent> {
       const res = await fetch(`${host}/api/chat`, {
         method: "POST",

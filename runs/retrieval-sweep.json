@@ -1,0 +1,152 @@
+{
+  "seed": 42,
+  "window": 60,
+  "topK": 5,
+  "questions": 100,
+  "results": [
+    {
+      "order": "grouped",
+      "threshold": null,
+      "hits": 0,
+      "recallServed": 0.96,
+      "recallFresh": 0.96,
+      "passageSetSeenRecently": 0.2
+    },
+    {
+      "order": "grouped",
+      "threshold": 0.95,
+      "hits": 0.02,
+      "recallServed": 0.96,
+      "recallFresh": 0.96,
+      "passageSetSeenRecently": 0.2
+    },
+    {
+      "order": "grouped",
+      "threshold": 0.9,
+      "hits": 0.07,
+      "recallServed": 0.96,
+      "recallFresh": 0.96,
+      "passageSetSeenRecently": 0.21
+    },
+    {
+      "order": "grouped",
+      "threshold": 0.85,
+      "hits": 0.12,
+      "recallServed": 0.96,
+      "recallFresh": 0.96,
+      "passageSetSeenRecently": 0.22
+    },
+    {
+      "order": "grouped",
+      "threshold": 0.8,
+      "hits": 0.2,
+      "recallServed": 0.96,
+      "recallFresh": 0.96,
+      "passageSetSeenRecently": 0.26
+    },
+    {
+      "order": "grouped",
+      "threshold": 0.75,
+      "hits": 0.35,
+      "recallServed": 0.95,
+      "recallFresh": 0.96,
+      "passageSetSeenRecently": 0.38
+    },
+    {
+      "order": "grouped",
+      "threshold": 0.7,
+      "hits": 0.42,
+      "recallServed": 0.93,
+      "recallFresh": 0.96,
+      "passageSetSeenRecently": 0.45
+    },
+    {
+      "order": "grouped",
+      "threshold": 0.65,
+      "hits": 0.54,
+      "recallServed": 0.91,
+      "recallFresh": 0.96,
+      "passageSetSeenRecently": 0.55
+    },
+    {
+      "order": "grouped",
+      "threshold": 0.6,
+      "hits": 0.64,
+      "recallServed": 0.93,
+      "recallFresh": 0.96,
+      "passageSetSeenRecently": 0.64
+    },
+    {
+      "order": "shuffled",
+      "threshold": null,
+      "hits": 0,
+      "recallServed": 0.96,
+      "recallFresh": 0.96,
+      "passageSetSeenRecently": 0.19
+    },
+    {
+      "order": "shuffled",
+      "threshold": 0.95,
+      "hits": 0.02,
+      "recallServed": 0.96,
+      "recallFresh": 0.96,
+      "passageSetSeenRecently": 0.19
+    },
+    {
+      "order": "shuffled",
+      "threshold": 0.9,
+      "hits": 0.06,
+      "recallServed": 0.96,
+      "recallFresh": 0.96,
+      "passageSetSeenRecently": 0.21
+    },
+    {
+      "order": "shuffled",
+      "threshold": 0.85,
+      "hits": 0.12,
+      "recallServed": 0.96,
+      "recallFresh": 0.96,
+      "passageSetSeenRecently": 0.24
+    },
+    {
+      "order": "shuffled",
+      "threshold": 0.8,
+      "hits": 0.2,
+      "recallServed": 0.96,
+      "recallFresh": 0.96,
+      "passageSetSeenRecently": 0.26
+    },
+    {
+      "order": "shuffled",
+      "threshold": 0.75,
+      "hits": 0.36,
+      "recallServed": 0.97,
+      "recallFresh": 0.96,
+      "passageSetSeenRecently": 0.36
+    },
+    {
+      "order": "shuffled",
+      "threshold": 0.7,
+      "hits": 0.44,
+      "recallServed": 0.94,
+      "recallFresh": 0.96,
+      "passageSetSeenRecently": 0.42
+    },
+    {
+      "order": "shuffled",
+      "threshold": 0.65,
+      "hits": 0.54,
+      "recallServed": 0.95,
+      "recallFresh": 0.96,
+      "passageSetSeenRecently": 0.52
+    },
+    {
+      "order": "shuffled",
+      "threshold": 0.6,
+      "hits": 0.65,
+      "recallServed": 0.94,
+      "recallFresh": 0.96,
+      "passageSetSeenRecently": 0.63
+    }
+  ]
+}

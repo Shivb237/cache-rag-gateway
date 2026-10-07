@@ -16,3 +16,12 @@ describe("loadConfig", () => {
     expect(c.seed).toBe(42);
   });
 });
+
+describe("loadConfig with several overrides", () => {
+  it("applies comma-separated overrides in order", () => {
+    const c = loadConfig("configs/base.yaml", "configs/providers/claude_sonnet.yaml,configs/ablations/all_off.yaml");
+    expect(c.llm.model).toBe("claude-sonnet-5-5");
+    expect(c.caches.exact.enabled).toBe(false);
+    expect(c.caches.promptPrefix.enabled).toBe(false);
+  });
+});

@@ -1,0 +1,120 @@
+{
+  "name": "staleness-claude",
+  "when": "2026-10-07T02:43:39.974Z",
+  "edits": 30,
+  "dataVersions": {
+    "before": "b179a40cb8675ce513ef1645b2dd63625c4221d2faf9b01242fea37eb14efe18",
+    "after": "4e7dccd3cf5ec71ef46a528f2c9634f37827157f24fd4ea183db940c33539150"
+  },
+  "answeredOldNumberBeforeUpdate": 29,
+  "setup": {
+    "seed": 42,
+    "llm": {
+      "provider": "anthropic",
+      "model": "claude-sonnet-5-5",
+      "modelDigest": null,
+      "temperature": 0,
+      "spendCapUsd": 8,
+      "pricing": {
+        "inputPerMTok": 2,
+        "outputPerMTok": 10,
+        "cacheWritePerMTok": 2.5,
+        "cacheReadPerMTok": 0.2
+      },
+      "options": {
+        "thinking": "between_tools",
+        "sendTemperature": false
+      }
+    },
+    "thresholds": {
+      "semantic": 0.9,
+      "retrieval": 0.75
+    }
+  },
+  "results": [
+    {
+      "arm": "fresh (no cache)",
+      "layer": "none",
+      "policy": "fresh",
+      "questions": 30,
+      "newAnswer": 29,
+      "staleAnswer": 0,
+      "other": 1,
+      "cacheHits": 0,
+      "modelCalls": 30,
+      "costUsd": 0.083386
+    },
+    {
+      "arm": "exact, no invalidation",
+      "layer": "exact",
+      "policy": "stale",
+      "questions": 30,
+      "newAnswer": 0,
+      "staleAnswer": 29,
+      "other": 1,
+      "cacheHits": 30,
+      "modelCalls": 0,
+      "costUsd": 0
+    },
+    {
+      "arm": "exact, invalidated by data version",
+      "layer": "exact",
+      "policy": "invalidate",
+      "questions": 30,
+      "newAnswer": 28,
+      "staleAnswer": 0,
+      "other": 2,
+      "cacheHits": 0,
+      "modelCalls": 30,
+      "costUsd": 0.083856
+    },
+    {
+      "arm": "semantic, no invalidation",
+      "layer": "semantic",
+      "policy": "stale",
+      "questions": 30,
+      "newAnswer": 0,
+      "staleAnswer": 29,
+      "other": 1,
+      "cacheHits": 30,
+      "modelCalls": 0,
+      "costUsd": 0
+    },
+    {
+      "arm": "semantic, invalidated by data version",
+      "layer": "semantic",
+      "policy": "invalidate",
+      "questions": 30,
+      "newAnswer": 29,
+      "staleAnswer": 0,
+      "other": 1,
+      "cacheHits": 0,
+      "modelCalls": 30,
+      "costUsd": 0.083526
+    },
+    {
+      "arm": "retrieval, no invalidation",
+      "layer": "retrieval",
+      "policy": "stale",
+      "questions": 30,
+      "newAnswer": 29,
+      "staleAnswer": 0,
+      "other": 1,
+      "cacheHits": 0,
+      "modelCalls": 30,
+      "costUsd": 0.08343600000000001
+    },
+    {
+      "arm": "retrieval, invalidated by data version",
+      "layer": "retrieval",
+      "policy": "invalidate",
+      "questions": 30,
+      "newAnswer": 29,
+      "staleAnswer": 0,
+      "other": 1,
+      "cacheHits": 0,
+      "modelCalls": 30,
+      "costUsd": 0.08325600000000001
+    }
+  ]
+}

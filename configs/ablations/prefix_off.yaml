@@ -1,0 +1,6 @@
+# Control: every cache off, and the model server's prefix cache defeated with a per-request nonce.
+caches:
+  exact: { enabled: false }
+  semantic: { enabled: false }
+  retrieval: { enabled: false }
+  promptPrefix: { enabled: false }

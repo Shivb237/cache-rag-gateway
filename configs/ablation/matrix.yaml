@@ -1,0 +1,11 @@
+# Cache arms to compare in the ablation (M7). Each arm gets its own private cache state.
+# A copy of the control arm is added automatically as "<control>-twin": the difference between the control and its
+# identical twin is the noise floor every other difference has to beat.
+control: none
+arms:
+  - { name: none,            exact: false, semantic: false, retrieval: false }
+  - { name: exact,           exact: true,  semantic: false, retrieval: false }
+  - { name: semantic,        exact: false, semantic: true,  retrieval: false }
+  - { name: exact+semantic,  exact: true,  semantic: true,  retrieval: false }
+  - { name: retrieval,       exact: false, semantic: false, retrieval: true, retrievalThreshold: 0.75 }
+  - { name: all,             exact: true,  semantic: true,  retrieval: true, retrievalThreshold: 0.75 }

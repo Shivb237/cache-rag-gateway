@@ -24,3 +24,9 @@ runs/tmp/
 CLAUDE.md
 .impeccable/
 docs/
+
+# throwaway smoke runs of the eval harness
+runs/smoke*
+
+# reports built from smoke runs
+reports/smoke*

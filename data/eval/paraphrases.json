@@ -1,0 +1,1213 @@
+{
+  "promptVersion": "paraphrase-v1",
+  "model": "qwen3:4b-instruct",
+  "modelDigest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+  "seed": 42,
+  "items": [
+    {
+      "questionId": "572916f16aef051400154a57",
+      "original": "Who is the biggest and most advanced economy in east and central Africa?",
+      "paraphrase": "Which country has the largest and most developed economy in East and Central Africa?",
+      "ok": true
+    },
+    {
+      "questionId": "572f5703a23a5019007fc575",
+      "original": "What is the alpine valley that the Rhine flows through?",
+      "paraphrase": "Which alpine valley does the Rhine river pass through?",
+      "ok": true
+    },
+    {
+      "questionId": "56bf57043aeaaa14008c95dd",
+      "original": "What city was the media event held for Super Bowl 50?",
+      "paraphrase": "In which city was the media event for Super Bowl 50 held?",
+      "ok": true
+    },
+    {
+      "questionId": "571cd88ddd7acb1400e4c18e",
+      "original": "What is the type of oxygen production for emergency oxygen in airlines?",
+      "paraphrase": "What kind of oxygen system is used for emergency oxygen supply in airlines?",
+      "ok": true
+    },
+    {
+      "questionId": "572fac17947a6a140053cb57",
+      "original": "To what body are certain powers explicitly specified as being reserved for?",
+      "paraphrase": "To what body are specific powers clearly stated as being reserved?",
+      "ok": true
+    },
+    {
+      "questionId": "5729d44b1d04691400779613",
+      "original": "What may explain why some Americans who've become rich may have had a head start?",
+      "paraphrase": "What could account for why some Americans who have become wealthy might have had an advantage from the beginning?",
+      "ok": true
+    },
+    {
+      "questionId": "57293bc91d0469140077919b",
+      "original": "Who is the chair of the IPCC?",
+      "paraphrase": "Who holds the position of chair at the IPCC?",
+      "ok": true
+    },
+    {
+      "questionId": "57378c9b1c456719005744a9",
+      "original": "What magnetic and electric force acts on a charge?",
+      "paraphrase": "What electric and magnetic forces act on a charge?",
+      "ok": true
+    },
+    {
+      "questionId": "572926653f37b31900478079",
+      "original": "When was the 8-4-4 system launched?",
+      "paraphrase": "What year was the 8-4-4 system introduced?",
+      "ok": true
+    },
+    {
+      "questionId": "571cd703dd7acb1400e4c184",
+      "original": "What is the mineral wustite?",
+      "paraphrase": "What is the mineral called wustite?",
+      "ok": true
+    },
+    {
+      "questionId": "5729feaf6aef051400155189",
+      "original": "In the year 2000 how many square kilometres of the Amazon forest had been lost?",
+      "paraphrase": "What was the total area in square kilometres of the Amazon forest that had been lost by the year 2000?",
+      "ok": true
+    },
+    {
+      "questionId": "56e12005cd28a01900c67619",
+      "original": "Why did he fire the secretary?",
+      "paraphrase": "What reason did he have for terminating the secretary?",
+      "ok": true
+    },
+    {
+      "questionId": "5725b5a689a1e219009abd29",
+      "original": "How did the Nixon administration negotiate with the uncooperative countries?",
+      "paraphrase": "How did the Nixon administration deal with countries that were unwilling to cooperate?",
+      "ok": true
+    },
+    {
+      "questionId": "57107e6ca58dae1900cd69f3",
+      "original": "What event was the worst example of Huguenot persecution?",
+      "paraphrase": "What incident represented the most severe instance of Huguenot persecution?",
+      "ok": true
+    },
+    {
+      "questionId": "57111380a58dae1900cd6bd7",
+      "original": "Where did this pro-reform leader teach?",
+      "paraphrase": "At which institution did this pro-reform leader serve as a teacher?",
+      "ok": true
+    },
+    {
+      "questionId": "5726ddf6f1498d1400e8ee06",
+      "original": "Who authored the Liber servitoris?",
+      "paraphrase": "Who wrote the Liber servitoris?",
+      "ok": true
+    },
+    {
+      "questionId": "572996c73f37b319004784b6",
+      "original": "On what type of exponentiation does the Diffie–Hellman key exchange depend on?",
+      "paraphrase": "What kind of exponentiation is the Diffie–Hellman key exchange based on?",
+      "ok": true
+    },
+    {
+      "questionId": "57277cf6dd62a815002e9e79",
+      "original": "Blue ribbons in the logo were used to represent which division of ABC?",
+      "paraphrase": "What division of ABC did the blue ribbons in its logo represent?",
+      "ok": true
+    },
+    {
+      "questionId": "57275bfb708984140094dc97",
+      "original": "Who departed as president of Capital Cities/ABC in 1994?",
+      "paraphrase": "Who left the position of president at Capital Cities/ABC in 1994?",
+      "ok": true
+    },
+    {
+      "questionId": "572ffd75b2c2fd14005686e8",
+      "original": "How much lower was the North Sea in the last cold phase than it is today?",
+      "paraphrase": "By how many meters was the North Sea lower during the last cold phase compared to its current level?",
+      "ok": true
+    },
+    {
+      "questionId": "5726de7a5951b619008f80ac",
+      "original": "Approximately how many items are in the glass collection of the V&A?",
+      "paraphrase": "How many items are roughly in the glass collection at the V&A?",
+      "ok": true
+    },
+    {
+      "questionId": "5729f24baf94a219006aa6de",
+      "original": "What did Kuznets argue resulted from stages of development?",
+      "paraphrase": "What did Kuznets claim was the outcome of the different stages of development?",
+      "ok": true
+    },
+    {
+      "questionId": "56f88eafaef2371900626196",
+      "original": "What did Luther call  the consecrated bread and wine?",
+      "paraphrase": "What did Luther refer to as the consecrated bread and wine?",
+      "ok": true
+    },
+    {
+      "questionId": "5730d473b7151e1900c0155b",
+      "original": "Who appoints elders?",
+      "paraphrase": "Who selects the elders?",
+      "ok": true
+    },
+    {
+      "questionId": "5726a7ecf1498d1400e8e655",
+      "original": "What does Article 102 of the Treaty of Lisbon prohibit?",
+      "paraphrase": "What does Article 102 of the Treaty of Lisbon ban?",
+      "ok": true
+    },
+    {
+      "questionId": "56d724620d65d214001983c1",
+      "original": "Who handled the play-by-play for WBT?",
+      "paraphrase": "Who was the play-by-play announcer for WBT?",
+      "ok": true
+    },
+    {
+      "questionId": "57376c50c3c5551400e51ece",
+      "original": "If a force is pointing horizontally to the northeast, how many forces can you split the force into?",
+      "paraphrase": "If a force is directed horizontally toward the northeast, how many components can you resolve it into?",
+      "ok": true
+    },
+    {
+      "questionId": "56f8989f9e9bad19000a01a6",
+      "original": "What was the purpose of the Turks in Luther's mind?",
+      "paraphrase": "What did Luther think the Turks were trying to achieve?",
+      "ok": true
+    },
+    {
+      "questionId": "57281a952ca10214002d9dea",
+      "original": "Who was the most frequent musical contributor to Doctor Who in the first 15 years of the show?",
+      "paraphrase": "What musician appeared most often on Doctor Who during the show's first 15 years?",
+      "ok": true
+    },
+    {
+      "questionId": "5729544c3f37b31900478259",
+      "original": "How are chloroplasts similar to mitochondria?",
+      "paraphrase": "What is the relationship between chloroplasts and mitochondria in terms of similarity?",
+      "ok": true
+    },
+    {
+      "questionId": "572ff4ca04bcaa1900d76f25",
+      "original": "Where does two thirds of the Rhine flow outside of Germany?",
+      "paraphrase": "What portion of the Rhine River flows outside of Germany, and where does it flow?",
+      "ok": true
+    },
+    {
+      "questionId": "572816213acd2414000df42c",
+      "original": "When was the last season that this original theme was used?",
+      "paraphrase": "What was the most recent season during which this original theme was played?",
+      "ok": true
+    },
+    {
+      "questionId": "56d9943fdc89441400fdb576",
+      "original": "Which team had the best regular season in their history?",
+      "paraphrase": "What team had the most successful regular season in their entire history?",
+      "ok": true
+    },
+    {
+      "questionId": "57273cca708984140094db37",
+      "original": "Zoning requirements, environmental impact, budgeting, and logistics are things who should consider?",
+      "paraphrase": "What aspects should be considered—such as zoning requirements, environmental impact, budgeting, and logistics?",
+      "ok": true
+    },
+    {
+      "questionId": "572fbfa504bcaa1900d76c75",
+      "original": "Who are debates and meetings open to?",
+      "paraphrase": "Who can attend debates and meetings?",
+      "ok": true
+    },
+    {
+      "questionId": "572741aaf1498d1400e8f53f",
+      "original": "How much did Walt Disney want ABC to invest in Disneyland?",
+      "paraphrase": "What amount did Walt Disney request ABC to invest in Disneyland?",
+      "ok": true
+    },
+    {
+      "questionId": "572fe53104bcaa1900d76e69",
+      "original": "Where was the Rhine regulated with a lower canal?",
+      "paraphrase": "At what location was the Rhine modified using a lower canal?",
+      "ok": true
+    },
+    {
+      "questionId": "57294209af94a219006aa202",
+      "original": "Who wrote the paper that the \"Millennial Northern Hemisphere temperature reconstruction\" graph was based on?",
+      "paraphrase": "What was the authorship of the paper that the \"Millennial Northern Hemisphere temperature reconstruction\" graph is derived from?",
+      "ok": true
+    },
+    {
+      "questionId": "572fe41e04bcaa1900d76e4c",
+      "original": "How long is the section that turns north? ",
+      "paraphrase": "What is the duration of the part that heads north?",
+      "ok": true
+    },
+    {
+      "questionId": "572a0bf96aef051400155206",
+      "original": "What type of hypersensitivity is associated with allergies?",
+      "paraphrase": "Which type of hypersensitivity reaction is linked to allergic responses?",
+      "ok": true
+    },
+    {
+      "questionId": "572900f73f37b31900477f6d",
+      "original": "What cytokines are responsible for communication between white blood cells?",
+      "paraphrase": "Which cytokines facilitate signaling among white blood cells?",
+      "ok": true
+    },
+    {
+      "questionId": "56f8b4d79b226e1400dd0e77",
+      "original": "What later actions by the Nazis could be traced back to Luther's rhetoric?",
+      "paraphrase": "What Nazi actions later could be linked to Luther's rhetoric?",
+      "ok": true
+    },
+    {
+      "questionId": "57106d2fb654c5140001f8ef",
+      "original": "What were the towns granted to the Huguenots in 1598 collectively called?",
+      "paraphrase": "What was the collective name for the towns given to the Huguenots in 1598?",
+      "ok": true
+    },
+    {
+      "questionId": "572a0e4b6aef051400155217",
+      "original": "What compounds can be masked with the molecules of the host cell in order for a virus to evade detection?",
+      "paraphrase": "Which molecules can be hidden using the host cell's own compounds so that a virus can avoid being detected?",
+      "ok": true
+    },
+    {
+      "questionId": "5728855d3acd2414000dfa8d",
+      "original": "Who did the Mongols give control of Korea?",
+      "paraphrase": "To whom did the Mongols transfer control of Korea?",
+      "ok": true
+    },
+    {
+      "questionId": "57283db6ff5b5019007d9fc0",
+      "original": "In what year will the Barack Obama Presidential Center be finished?",
+      "paraphrase": "When will the Barack Obama Presidential Center be completed?",
+      "ok": true
+    },
+    {
+      "questionId": "57267b65dd62a815002e86a9",
+      "original": "Strang is an Anglo-Saxon word which means what in modern English?",
+      "paraphrase": "What does the Anglo-Saxon word \"Strang\" mean in modern English?",
+      "ok": true
+    },
+    {
+      "questionId": "571cc6f85efbb31900334de4",
+      "original": "At what temperature will oxygen condense?",
+      "paraphrase": "What temperature is required for oxygen to change from gas to liquid?",
+      "ok": true
+    },
+    {
+      "questionId": "572fdb17b2c2fd140056851f",
+      "original": "How old most a person be to apply to be an MSP?",
+      "paraphrase": "What is the maximum age a person can be to apply to be an MSP?",
+      "ok": true
+    },
+    {
+      "questionId": "570d4606b3d812140066d619",
+      "original": "What state in Australia is the center of dairy farming?",
+      "paraphrase": "Which state in Australia is primarily known for dairy farming?",
+      "ok": true
+    },
+    {
+      "questionId": "57267b65dd62a815002e86a8",
+      "original": "What does the Geordie dialect keep of the older language which came before it?",
+      "paraphrase": "What elements of the earlier language have been preserved in the Geordie dialect?",
+      "ok": true
+    },
+    {
+      "questionId": "56d2053ae7d4791d00902610",
+      "original": "Who if the commissioner of the NFL?",
+      "paraphrase": "Who is the current commissioner of the NFL?",
+      "ok": true
+    },
+    {
+      "questionId": "572fe53104bcaa1900d76e6c",
+      "original": "What was diverted and now flows parallel to the Rhine?",
+      "paraphrase": "What waterway was redirected and now runs alongside the Rhine?",
+      "ok": true
+    },
+    {
+      "questionId": "56be53b8acb8001400a50314",
+      "original": "Who was the NFL Commissioner in early 2012?",
+      "paraphrase": "Who held the position of NFL Commissioner at the beginning of 2012?",
+      "ok": true
+    },
+    {
+      "questionId": "572ff626947a6a140053ce90",
+      "original": "What goal does Islamism have when it comes to society and government?",
+      "paraphrase": "What objective does Islamism aim to achieve in regards to society and government?",
+      "ok": true
+    },
+    {
+      "questionId": "57309446396df919000961b9",
+      "original": "What were European countries doing during the 1700's?",
+      "paraphrase": "What activities were European nations engaged in during the 1700s?",
+      "ok": true
+    },
+    {
+      "questionId": "5733a45d4776f41900660f25",
+      "original": "How long has the imagery of the mermaid been used by Warsaw?",
+      "paraphrase": "For how long has Warsaw employed the imagery of the mermaid?",
+      "ok": true
+    },
+    {
+      "questionId": "572faf74b2c2fd1400568348",
+      "original": "Where were interviews held while the parliament was in its temporary building?",
+      "paraphrase": "In which location were interviews conducted when the parliament was using its temporary building?",
+      "ok": true
+    },
+    {
+      "questionId": "570d3468b3d812140066d543",
+      "original": "What type of manufacturing plant is Victoria soon losing?",
+      "paraphrase": "What kind of manufacturing facility is Victoria about to lose?",
+      "ok": true
+    },
+    {
+      "questionId": "57284e9fff5b5019007da154",
+      "original": "What year did the university open a center in Hong Kong?",
+      "paraphrase": "In which year did the university establish a center in Hong Kong?",
+      "ok": true
+    },
+    {
+      "questionId": "57309446396df919000961bb",
+      "original": "When did the age of imperialism end?",
+      "paraphrase": "What year did the era of imperialism conclude?",
+      "ok": true
+    },
+    {
+      "questionId": "56e190bce3433e1400422fcb",
+      "original": "What will the output be for a member of the language of a decision problem?",
+      "paraphrase": "What will the output be for a member of the language defined by a decision problem?",
+      "ok": true
+    },
+    {
+      "questionId": "572648e8dd62a815002e8077",
+      "original": "What are cilia used for?",
+      "paraphrase": "What is the function of cilia?",
+      "ok": true
+    },
+    {
+      "questionId": "56f84d33aef2371900625fb2",
+      "original": "What event did Storch and Muntzer help instigate?",
+      "paraphrase": "What event did Storch and Muntzer play a role in starting?",
+      "ok": true
+    },
+    {
+      "questionId": "57060cc352bb891400689811",
+      "original": "Century City is an example of a district that belongs to which city?",
+      "paraphrase": "Which city does the district Century City belong to?",
+      "ok": true
+    },
+    {
+      "questionId": "57290b21af94a219006a9fd2",
+      "original": "How does Kenya curb coruption?",
+      "paraphrase": "What measures does Kenya take to combat corruption?",
+      "ok": true
+    },
+    {
+      "questionId": "572fbfa504bcaa1900d76c77",
+      "original": "What contains a nearly verbatim of parliamentary debates?",
+      "paraphrase": "What includes a nearly word-for-word account of parliamentary debates?",
+      "ok": true
+    },
+    {
+      "questionId": "56f84d33aef2371900625fb3",
+      "original": "When did The German Peasants War happen?",
+      "paraphrase": "What was the start date of the German Peasants' War?",
+      "ok": true
+    },
+    {
+      "questionId": "5726e985dd62a815002e94db",
+      "original": "In what states are pharmacist clinicians given prescriptive and diagnostic authority?",
+      "paraphrase": "Which states grant pharmacist clinicians the authority to prescribe and diagnose?",
+      "ok": true
+    },
+    {
+      "questionId": "572ff56304bcaa1900d76f2f",
+      "original": "How much of the Rhine flow does Ijssel carry?",
+      "paraphrase": "What portion of the Rhine River's flow is transported by the Ijssel?",
+      "ok": true
+    },
+    {
+      "questionId": "57290b21af94a219006a9fd1",
+      "original": "Where is Kenya place on the scale in 2012?",
+      "paraphrase": "What was Kenya's position on the scale in 2012?",
+      "ok": true
+    },
+    {
+      "questionId": "5729046aaf94a219006a9f4d",
+      "original": "When was Waruhiu Itote captured?",
+      "paraphrase": "What year was Waruhiu Itote taken?",
+      "ok": true
+    },
+    {
+      "questionId": "571c3e8cdd7acb1400e4c0a8",
+      "original": "In what century did Mayow and Boyle perform their experiments?",
+      "paraphrase": "In which century did Mayow and Boyle carry out their experiments?",
+      "ok": true
+    },
+    {
+      "questionId": "57267ce7708984140094c7c9",
+      "original": "What was published in February of 2007?",
+      "paraphrase": "What was released in February 2007?",
+      "ok": true
+    },
+    {
+      "questionId": "572fe393947a6a140053cdba",
+      "original": "What is the conventional measurement of the Rhine? ",
+      "paraphrase": "What is the standard length of the Rhine?",
+      "ok": true
+    },
+    {
+      "questionId": "5726ec6ff1498d1400e8eff4",
+      "original": "When was the agreement to acquire ABC approved by UPT's board?",
+      "paraphrase": "What date did UPT's board approve the agreement to buy ABC?",
+      "ok": true
+    },
+    {
+      "questionId": "57107e6ca58dae1900cd69f6",
+      "original": "What was a non-religious reason for the massacre?",
+      "paraphrase": "What was a secular explanation for the massacre?",
+      "ok": true
+    },
+    {
+      "questionId": "570d4606b3d812140066d61a",
+      "original": "How many dairy cows are there in Australia?",
+      "paraphrase": "What is the number of dairy cows in Australia?",
+      "ok": true
+    },
+    {
+      "questionId": "57115ff82419e314009555c7",
+      "original": "In the United States, what is a usual turbine speed with 60 Hertz of power?",
+      "paraphrase": "What is a typical turbine speed in the United States when the power frequency is 60 Hertz?",
+      "ok": true
+    },
+    {
+      "questionId": "5726d7faf1498d1400e8ecdc",
+      "original": "The entrepreneurs Josiah Wedgwood, Matthew Boulton and Eleanor Coade were influenced by what manufacturing process developed during the Industrial Revolution?",
+      "paraphrase": "What manufacturing process, developed during the Industrial Revolution, influenced the entrepreneurs Josiah Wedgwood, Matthew Boulton, and Eleanor Coade?",
+      "ok": true
+    },
+    {
+      "questionId": "56e1011ecd28a01900c6740b",
+      "original": "When did Tesla depart from Colorado Springs?",
+      "paraphrase": "What was the date when Tesla left Colorado Springs?",
+      "ok": true
+    },
+    {
+      "questionId": "572963876aef051400154dd2",
+      "original": "What are Apicomplexans similar to?",
+      "paraphrase": "What do Apicomplexans resemble?",
+      "ok": true
+    },
+    {
+      "questionId": "56e11afbcd28a01900c675c7",
+      "original": "What did Tesla tell Brisbane he didn't believe in?",
+      "paraphrase": "What did Tesla say he didn't believe in when speaking to Brisbane?",
+      "ok": true
+    },
+    {
+      "questionId": "5730b54c069b531400832290",
+      "original": "What part of the UMC calls for its bishops to uphold opposition to capital punishment?",
+      "paraphrase": "Which section of the UMC requires its bishops to oppose capital punishment?",
+      "ok": true
+    },
+    {
+      "questionId": "57097d63ed30961900e841fe",
+      "original": "What company agreed to terminate high court proceedings with BSkyB?",
+      "paraphrase": "Which company agreed to end high court legal actions against BSkyB?",
+      "ok": true
+    },
+    {
+      "questionId": "57113c6da58dae1900cd6d34",
+      "original": "What was Hero of Alexandria's nationality?",
+      "paraphrase": "What country was Hero of Alexandria from?",
+      "ok": true
+    },
+    {
+      "questionId": "56dfad0a7aa994140058dfca",
+      "original": "What did Tesla claim to perfect while at the exchange?",
+      "paraphrase": "What did Tesla claim to perfect during his time at the exchange?",
+      "ok": true
+    },
+    {
+      "questionId": "57281a952ca10214002d9dec",
+      "original": "In what decades was Dudley Simpson most active in contributing to Doctor Who?",
+      "paraphrase": "During which decades did Dudley Simpson make the most contributions to Doctor Who?",
+      "ok": true
+    },
+    {
+      "questionId": "572ff7ab04bcaa1900d76f55",
+      "original": "What is the translation of Oude Maas?",
+      "paraphrase": "What is the translation of Oude Maas?",
+      "ok": false,
+      "reason": "same as original"
+    },
+    {
+      "questionId": "572754dd708984140094dc3b",
+      "original": "As of 2008, about what percentage of Swedish students attended private schools?",
+      "paraphrase": "What percent of Swedish students went to private schools in 2008?",
+      "ok": true
+    },
+    {
+      "questionId": "5726534d708984140094c26e",
+      "original": "What was Norman Cantor's theory about the plague?",
+      "paraphrase": "What did Norman Cantor propose regarding the plague?",
+      "ok": true
+    },
+    {
+      "questionId": "5728de0e2ca10214002da9df",
+      "original": "What regions do the north-eastern part of the country boarder?",
+      "paraphrase": "What areas border the north-eastern part of the country?",
+      "ok": true
+    },
+    {
+      "questionId": "56dfa3c338dc421700152158",
+      "original": "Did Tesla graduate from the university?",
+      "paraphrase": "Did Tesla graduate from university?",
+      "ok": false,
+      "reason": "same as original"
+    },
+    {
+      "questionId": "56d71bd80d65d21400198361",
+      "original": "Where was media day for Super Bowl 50 held?",
+      "paraphrase": "Where was the media day for Super Bowl 50 conducted?",
+      "ok": true
+    },
+    {
+      "questionId": "56f82549a6d7ea1400e17416",
+      "original": "What was the style of Luther's salute at the end of his speech?",
+      "paraphrase": "What kind of salute did Luther use at the end of his speech?",
+      "ok": true
+    },
+    {
+      "questionId": "57277de9dd62a815002e9ea4",
+      "original": "What are the two ABC affiliates for Tampa, Florida?",
+      "paraphrase": "Which two ABC television stations serve Tampa, Florida?",
+      "ok": true
+    },
+    {
+      "questionId": "572900f73f37b31900477f69",
+      "original": "What is one of the first responses the immune system has to infection?",
+      "paraphrase": "What is an early reaction that the immune system exhibits when faced with an infection?",
+      "ok": true
+    },
+    {
+      "questionId": "56e1b754cd28a01900c67abc",
+      "original": "Time and space are both examples of what type of resource?",
+      "paraphrase": "What kind of resource do time and space both belong to?",
+      "ok": true
+    },
+    {
+      "questionId": "571cb27fdd7acb1400e4c134",
+      "original": "How much heavier is oxygen 18 than oxygen 16?",
+      "paraphrase": "By how many units is oxygen 18 heavier than oxygen 16?",
+      "ok": true
+    },
+    {
+      "questionId": "5729ef266aef05140015511f",
+      "original": "Who is credited with finding evidence of large settlements in the Amazon forest?",
+      "paraphrase": "Who discovered evidence of extensive settlements in the Amazon rainforest?",
+      "ok": true
+    },
+    {
+      "questionId": "572975511d046914007794a9",
+      "original": "Where is cyclic photophosphorylation common?",
+      "paraphrase": "In which location is cyclic photophosphorylation typically found?",
+      "ok": true
+    },
+    {
+      "questionId": "56d6f1190d65d21400198274",
+      "original": "Prior to Super Bowl 50, when were the Broncos last there?",
+      "paraphrase": "Before Super Bowl 50, in what year were the Broncos last present?",
+      "ok": true
+    },
+    {
+      "questionId": "5726b9e15951b619008f7bf5",
+      "original": "Who made Temüjin khan of the Mongols?",
+      "paraphrase": "Who became Temüjin khan of the Mongols?",
+      "ok": true
+    },
+    {
+      "questionId": "5710eca0a58dae1900cd6b3b",
+      "original": "In what area of this British colony were Huguenot land grants?",
+      "paraphrase": "Where in this British colony were Huguenot land grants located?",
+      "ok": true
+    },
+    {
+      "questionId": "5729ef266aef051400155120",
+      "original": "Evidence for what types of structures were found in 2003?",
+      "paraphrase": "What kinds of structures were identified in 2003?",
+      "ok": true
+    },
+    {
+      "questionId": "56d9c203dc89441400fdb7a0",
+      "original": "What two radio stations in Denver carried Super Bowl 50?",
+      "paraphrase": "Which two radio stations in Denver broadcasted Super Bowl 50?",
+      "ok": true
+    },
+    {
+      "questionId": "5728809f2ca10214002da40e",
+      "original": "What was the Chinese name of Gou's calendar?",
+      "paraphrase": "What was the Chinese name of Gou's calendar?",
+      "ok": false,
+      "reason": "same as original"
+    },
+    {
+      "questionId": "5726642f5951b619008f7158",
+      "original": "How many miles from the north Sea is Newcastle?",
+      "paraphrase": "What is the distance in miles from Newcastle to the North Sea?",
+      "ok": true
+    },
+    {
+      "questionId": "572ffd9e04bcaa1900d76fc8",
+      "original": "What does Salafism in its harshest form encourage its followers to view the religion of others with?",
+      "paraphrase": "What does Salafism in its most extreme form encourage its followers to see the religion of others as?",
+      "ok": true
+    },
+    {
+      "questionId": "5727f8342ca10214002d9a80",
+      "original": "What other series mentioned returned with a plot continuation?",
+      "paraphrase": "Which other series that was mentioned came back with a plot continuation?",
+      "ok": true
+    },
+    {
+      "questionId": "572736625951b619008f86d4",
+      "original": "What slogan accompanied the 40th anniversary logo for ABC?",
+      "paraphrase": "What was the slogan that matched the ABC 40th anniversary logo?",
+      "ok": true
+    },
+    {
+      "questionId": "57286c8cff5b5019007da21c",
+      "original": "How many people in Quzhou are descended from Confucius?",
+      "paraphrase": "What is the number of people in Quzhou who trace their ancestry back to Confucius?",
+      "ok": true
+    },
+    {
+      "questionId": "5725bbec271a42140099d0d3",
+      "original": "Under what treaty can the European Commission take action against member states?",
+      "paraphrase": "Which treaty authorizes the European Commission to take action against member states?",
+      "ok": true
+    },
+    {
+      "questionId": "572833662ca10214002da08a",
+      "original": "Which fantasy books have references to Doctor Who?",
+      "paraphrase": "What fantasy books mention Doctor Who?",
+      "ok": true
+    },
+    {
+      "questionId": "56d9992fdc89441400fdb59e",
+      "original": "Who had five sacks in nine games as a Carolina Panthers starter?",
+      "paraphrase": "Which player recorded five sacks over nine games while starting for the Carolina Panthers?",
+      "ok": true
+    },
+    {
+      "questionId": "5733e8ae4776f419006614a6",
+      "original": "What Governor in charge of New France died in 1752?",
+      "paraphrase": "Which governor of New France passed away in 1752?",
+      "ok": true
+    },
+    {
+      "questionId": "5725cda338643c19005acd40",
+      "original": "How much thrust was estimated for the translunar flight?",
+      "paraphrase": "What was the estimated thrust for the journey to the moon?",
+      "ok": true
+    },
+    {
+      "questionId": "57274ca8dd62a815002e9aa6",
+      "original": "What is the full name of the ASER?",
+      "paraphrase": "What is the complete name of ASER?",
+      "ok": true
+    },
+    {
+      "questionId": "56dfa3c338dc421700152155",
+      "original": "What school did he enroll in during 1875?",
+      "paraphrase": "Which school did he join in 1875?",
+      "ok": true
+    },
+    {
+      "questionId": "5726afeb708984140094cdda",
+      "original": "A subway tunnel from the museum leads to which tube station?",
+      "paraphrase": "Which tube station does the subway tunnel from the museum connect to?",
+      "ok": true
+    },
+    {
+      "questionId": "56e0bb9f7aa994140058e6ce",
+      "original": "When did people once again start to show an interest in Tesla?",
+      "paraphrase": "When did people first begin showing interest in Tesla again?",
+      "ok": true
+    },
+    {
+      "questionId": "57268294708984140094c879",
+      "original": "How many years does the V&A's collections span?",
+      "paraphrase": "What is the time span of the V&A's collections in years?",
+      "ok": true
+    },
+    {
+      "questionId": "57273cca708984140094db35",
+      "original": "What is essential for the successful execution of a project?",
+      "paraphrase": "What must be in place for a project to be completed successfully?",
+      "ok": true
+    },
+    {
+      "questionId": "570d4606b3d812140066d61b",
+      "original": "What percentage of Australia's dairy cattle are found in Victoria?",
+      "paraphrase": "How much of Australia's dairy cattle population is located in Victoria?",
+      "ok": true
+    },
+    {
+      "questionId": "572ff293947a6a140053ce55",
+      "original": "What city has the largest inland port in Europe?",
+      "paraphrase": "Which city hosts the biggest inland port in Europe?",
+      "ok": true
+    },
+    {
+      "questionId": "5726398589a1e219009ac588",
+      "original": "What does connection orientation require",
+      "paraphrase": "What are the requirements for connection orientation?",
+      "ok": true
+    },
+    {
+      "questionId": "5729d878af94a219006aa66b",
+      "original": "What controls wages in a purely capitalist mode of production?",
+      "paraphrase": "What determines wages in a purely capitalist system of production?",
+      "ok": true
+    },
+    {
+      "questionId": "572ff626947a6a140053ce92",
+      "original": "One strategy of Islamization is to seize power by what methods?",
+      "paraphrase": "What methods involve seizing power as part of Islamization?",
+      "ok": true
+    },
+    {
+      "questionId": "572fc6f204bcaa1900d76cf9",
+      "original": "Where might committees meet outside of Parliament?",
+      "paraphrase": "What locations could committees use besides Parliament?",
+      "ok": true
+    },
+    {
+      "questionId": "5726a00d708984140094cc29",
+      "original": "Where was Genghis Khan buried?",
+      "paraphrase": "What is the location of Genghis Khan's burial site?",
+      "ok": true
+    },
+    {
+      "questionId": "56dfaa047aa994140058dfbe",
+      "original": "When was Tesla returned to Gospic?",
+      "paraphrase": "What was the date when Tesla was brought back to Gospic?",
+      "ok": true
+    },
+    {
+      "questionId": "571127a5a58dae1900cd6cc8",
+      "original": "In what geographical portion of Wales is Abercynon located?",
+      "paraphrase": "Which part of Wales does the village of Abercynon lie in?",
+      "ok": true
+    },
+    {
+      "questionId": "5726acc1f1498d1400e8e6cb",
+      "original": "Which shaman's proclamation aided Temüjin's rise? ",
+      "paraphrase": "Which shaman's declaration helped Temüjin rise?",
+      "ok": true
+    },
+    {
+      "questionId": "5730a4d02461fd1900a9cf29",
+      "original": "When did France take control of Algeria?",
+      "paraphrase": "What year did France begin governing Algeria?",
+      "ok": true
+    },
+    {
+      "questionId": "57269424dd62a815002e8a1e",
+      "original": "Which entity is the secondary legislative body?",
+      "paraphrase": "What is the name of the second-tier legislative body?",
+      "ok": true
+    },
+    {
+      "questionId": "5729f1fcaf94a219006aa6d6",
+      "original": "Helper and regulatory T cells can only recognize antigens coupled to what kind of molecules?",
+      "paraphrase": "What type of molecules must antigens be attached to in order for helper and regulatory T cells to recognize them?",
+      "ok": true
+    },
+    {
+      "questionId": "5725ea6889a1e219009ac09e",
+      "original": "How did the rocks on the moon compare to those on Earth?",
+      "paraphrase": "What was the difference between the rocks found on the moon and those on Earth?",
+      "ok": true
+    },
+    {
+      "questionId": "5733cff84776f419006612b4",
+      "original": "Where was war fought?",
+      "paraphrase": "In which location was the war fought?",
+      "ok": true
+    },
+    {
+      "questionId": "571cb27fdd7acb1400e4c136",
+      "original": "During what type of climate is oxygen 18 in seawater at higher levels?",
+      "paraphrase": "In what kind of climate are levels of oxygen 18 in seawater elevated?",
+      "ok": true
+    },
+    {
+      "questionId": "56e751fb00c9c71400d76faa",
+      "original": "What is a typical name for learning that is not inside of the classroom?",
+      "paraphrase": "What is a common name for education that takes place outside of the classroom?",
+      "ok": true
+    },
+    {
+      "questionId": "56e0bb9f7aa994140058e6cb",
+      "original": "How did Tesla finance his work?",
+      "paraphrase": "What was Tesla's source of funding for his projects?",
+      "ok": true
+    },
+    {
+      "questionId": "56f8907faef23719006261b4",
+      "original": "What did Protestant nobles form the following year after the signing of the Augsburg Confession?",
+      "paraphrase": "What did Protestant nobles establish the year after the Augsburg Confession was signed?",
+      "ok": true
+    },
+    {
+      "questionId": "5729fefbaf94a219006aa73c",
+      "original": "What are some causes of reduced immune function in developed countries?",
+      "paraphrase": "What are some reasons for weakened immune function in developed countries?",
+      "ok": true
+    },
+    {
+      "questionId": "56f8907faef23719006261b5",
+      "original": "Which group did not agree to sign these agreements?",
+      "paraphrase": "Which group refused to sign these agreements?",
+      "ok": true
+    },
+    {
+      "questionId": "572917743f37b3190047800d",
+      "original": "What was East and Central Africa's economy boosted by?",
+      "paraphrase": "What contributed to the growth of East and Central Africa's economy?",
+      "ok": true
+    },
+    {
+      "questionId": "56de4b074396321400ee2794",
+      "original": "What architecture type came before Norman in England?",
+      "paraphrase": "What type of architecture predated Norman in England?",
+      "ok": true
+    },
+    {
+      "questionId": "572879574b864d1900164a16",
+      "original": "What religion did the Yuan discourage, to support Buddhism?",
+      "paraphrase": "What religion did the Yuan dynasty discourage in order to promote Buddhism?",
+      "ok": true
+    },
+    {
+      "questionId": "57296a65af94a219006aa3c7",
+      "original": "Where does the secondary theory say most genes are kept?",
+      "paraphrase": "According to the secondary theory, where are the majority of genes stored?",
+      "ok": true
+    },
+    {
+      "questionId": "5710eca0a58dae1900cd6b3e",
+      "original": "When were these settlers naturalized as English colonists?",
+      "paraphrase": "When were these settlers granted English colonial status?",
+      "ok": true
+    },
+    {
+      "questionId": "572f609ca23a5019007fc5af",
+      "original": "After the Rhine emerges from Lake Constance, what direction does it flow?",
+      "paraphrase": "Once the Rhine leaves Lake Constance, in which direction does it move?",
+      "ok": true
+    },
+    {
+      "questionId": "5733638fd058e614000b59e8",
+      "original": "The Kronenberg Palace had been an exceptional example of what type of architecture?",
+      "paraphrase": "What architectural style did the Kronenberg Palace exemplify?",
+      "ok": true
+    },
+    {
+      "questionId": "5729506d6aef051400154cad",
+      "original": "What remain unsolved problems with the Kyoto Protocol?",
+      "paraphrase": "What are the unresolved issues with the Kyoto Protocol?",
+      "ok": true
+    },
+    {
+      "questionId": "5725bbec271a42140099d0d1",
+      "original": "Who applies European Union law?",
+      "paraphrase": "Which entity is responsible for applying European Union law?",
+      "ok": true
+    },
+    {
+      "questionId": "57340d124776f419006617c2",
+      "original": "What natives were displaced by British takeover in Florida?",
+      "paraphrase": "Which indigenous peoples were removed from Florida during the British takeover?",
+      "ok": true
+    },
+    {
+      "questionId": "5726d7faf1498d1400e8ecde",
+      "original": "Who is considered the leading figure in the Arts and Crafts movement?",
+      "paraphrase": "What person is widely regarded as the most influential individual in the Arts and Crafts movement?",
+      "ok": true
+    },
+    {
+      "questionId": "57338007d058e614000b5bda",
+      "original": "What type of city has Warsaw been for as long as it's been a city?",
+      "paraphrase": "What kind of city has Warsaw been throughout its entire history as a city?",
+      "ok": true
+    },
+    {
+      "questionId": "56e1254ae3433e1400422c66",
+      "original": "What article was published in 1937?",
+      "paraphrase": "Which article came out in 1937?",
+      "ok": true
+    },
+    {
+      "questionId": "572754cd5951b619008f8863",
+      "original": "Which descendant of Genghis Khan sacked Baghdad?",
+      "paraphrase": "Which member of Genghis Khan's lineage attacked Baghdad?",
+      "ok": true
+    },
+    {
+      "questionId": "572fc6f204bcaa1900d76cf5",
+      "original": "Where is much of the work of the Scottish Parliament done?",
+      "paraphrase": "Where is most of the Scottish Parliament's work carried out?",
+      "ok": true
+    },
+    {
+      "questionId": "57376c50c3c5551400e51ed0",
+      "original": "What are the independant components of a vector sum that has been determined by scalar addition of individual vectors?",
+      "paraphrase": "What are the independent components of a vector sum that results from the scalar addition of individual vectors?",
+      "ok": true
+    },
+    {
+      "questionId": "57280fd3ff5b5019007d9c26",
+      "original": "Who mapped the St. Johns River in 1562?",
+      "paraphrase": "Who was the person responsible for mapping the St. Johns River in 1562?",
+      "ok": true
+    },
+    {
+      "questionId": "572ff673b2c2fd140056866b",
+      "original": "What is the nickname for the Delta in the Netherlands?",
+      "paraphrase": "What is the informal name for the Delta in the Netherlands?",
+      "ok": true
+    },
+    {
+      "questionId": "5726b1d95951b619008f7ace",
+      "original": "Why did Temüjin kill those of Jamukha's followers that had betrayed their leader?",
+      "paraphrase": "Why did Temüjin execute the followers of Jamukha who had betrayed their leader?",
+      "ok": true
+    },
+    {
+      "questionId": "572861cc4b864d190016495f",
+      "original": "Since what year did the university offer a doctorate in Cinema & Media studies?",
+      "paraphrase": "In which year did the university begin offering a doctorate in Cinema & Media studies?",
+      "ok": true
+    },
+    {
+      "questionId": "56f826a7a6d7ea1400e17428",
+      "original": "Who said, \"Here I stand. I can do no other\"?",
+      "paraphrase": "Who said, \"Here I stand. I can do no other\"?",
+      "ok": false,
+      "reason": "same as original"
+    },
+    {
+      "questionId": "57113c6da58dae1900cd6d36",
+      "original": "In what year did Jerónimo de Ayanz y Beaumont patent a water pump for draining mines?",
+      "paraphrase": "When was the water pump patented by Jerónimo de Ayanz y Beaumont for draining mines?",
+      "ok": true
+    },
+    {
+      "questionId": "56d7253b0d65d214001983d4",
+      "original": "Who did the National Anthem at Super Bowl 50?",
+      "paraphrase": "Who performed the National Anthem at Super Bowl 50?",
+      "ok": true
+    },
+    {
+      "questionId": "572863363acd2414000df986",
+      "original": "In the fall quarter of 2014, how many students signed up for the university's four graduate divisions?",
+      "paraphrase": "How many students enrolled in the university's four graduate divisions during the fall quarter of 2014?",
+      "ok": true
+    },
+    {
+      "questionId": "572a03086aef0514001551a3",
+      "original": "Low doses of anti-inflammatories are sometimes used with what classes of drugs?",
+      "paraphrase": "What drug classes are sometimes combined with low doses of anti-inflammatories?",
+      "ok": true
+    },
+    {
+      "questionId": "5725c3a9ec44d21400f3d504",
+      "original": "Under what treaty can the European Commission take action against member states?",
+      "paraphrase": "Which treaty authorizes the European Commission to take action against member states?",
+      "ok": true
+    },
+    {
+      "questionId": "573093598ab72b1400f9c5b2",
+      "original": "How do regimes fight against cultural imperialism?",
+      "paraphrase": "What methods do regimes use to resist cultural imperialism?",
+      "ok": true
+    },
+    {
+      "questionId": "57263cfcec44d21400f3dc8e",
+      "original": "WHat were features of Apple Talk ",
+      "paraphrase": "What were the features of Apple Talk?",
+      "ok": false,
+      "reason": "same as original"
+    },
+    {
+      "questionId": "5733314e4776f4190066076b",
+      "original": "How many miles east of Berlin is Warsaw?",
+      "paraphrase": "What is the distance in miles from Berlin to Warsaw, measured eastward?",
+      "ok": true
+    },
+    {
+      "questionId": "571cd703dd7acb1400e4c182",
+      "original": "What characteristic of oxygen causes it to form bonds with other elements?",
+      "paraphrase": "What property of oxygen leads it to create bonds with other elements?",
+      "ok": true
+    },
+    {
+      "questionId": "57270ab9708984140094d8f8",
+      "original": "What two environmental conditions are controlled in the museum?",
+      "paraphrase": "Which two environmental factors are managed within the museum?",
+      "ok": true
+    },
+    {
+      "questionId": "570d4e6cb3d812140066d670",
+      "original": "Who is the current Premier of Victoria?",
+      "paraphrase": "What is the name of the present Premier of Victoria?",
+      "ok": true
+    },
+    {
+      "questionId": "572ffabf04bcaa1900d76f9f",
+      "original": "What term do Islamists think should be applied to them?",
+      "paraphrase": "What term do Islamist groups believe should be used to describe themselves?",
+      "ok": true
+    },
+    {
+      "questionId": "57300a9a04bcaa1900d77063",
+      "original": "When was Rhineland subject to the Treaty of Versailles?",
+      "paraphrase": "Until when was Rhineland under the terms of the Treaty of Versailles?",
+      "ok": true
+    },
+    {
+      "questionId": "5733d13e4776f419006612c6",
+      "original": "Why did British operation fail in 1755, 56, 57?",
+      "paraphrase": "Why did the British operations fail in 1755, 1756, and 1757?",
+      "ok": true
+    },
+    {
+      "questionId": "5727ea45ff5b5019007d9871",
+      "original": "What impact does higher worker productivity and leveled pay have on higher earners?",
+      "paraphrase": "How does increased worker productivity and equalized wages affect higher-earning individuals?",
+      "ok": true
+    },
+    {
+      "questionId": "57268bf9dd62a815002e890d",
+      "original": "What are some supplementary sources of European Union law?",
+      "paraphrase": "What are some additional sources of European Union law?",
+      "ok": true
+    },
+    {
+      "questionId": "5725b77889a1e219009abd55",
+      "original": "What Apollo mission was the sixth moon landing?",
+      "paraphrase": "Which Apollo mission completed the sixth lunar landing?",
+      "ok": true
+    },
+    {
+      "questionId": "56beb3083aeaaa14008c9240",
+      "original": "How many Panthers were designated All-Pro?",
+      "paraphrase": "What is the total number of Panthers who were named All-Pro?",
+      "ok": true
+    },
+    {
+      "questionId": "572881d34b864d1900164a5e",
+      "original": "What philosophies underlay Chinese medicine?",
+      "paraphrase": "What intellectual beliefs formed the foundation of Chinese medicine?",
+      "ok": true
+    },
+    {
+      "questionId": "56f8afbc9b226e1400dd0e08",
+      "original": "What did Luther contend the Jews to be?",
+      "paraphrase": "What did Luther claim about the Jews?",
+      "ok": true
+    },
+    {
+      "questionId": "572978e66aef051400154f77",
+      "original": "What kind of light is inadequate for chloroplasts to divide?",
+      "paraphrase": "What type of light is not sufficient for chloroplasts to divide?",
+      "ok": true
+    },
+    {
+      "questionId": "573093598ab72b1400f9c5b1",
+      "original": "Which historic empire used cultural imperialism to sway local elites?",
+      "paraphrase": "Which ancient empire employed cultural imperialism to influence local elites?",
+      "ok": true
+    },
+    {
+      "questionId": "57277632f1498d1400e8f8c5",
+      "original": "What does \"TGIF\" stand for?",
+      "paraphrase": "What is the meaning of \"TGIF\"?",
+      "ok": true
+    },
+    {
+      "questionId": "5730aeba069b531400832241",
+      "original": "What is the grace that we receive by faith and trust in God?",
+      "paraphrase": "What is the gift that we obtain through faith and trust in God?",
+      "ok": true
+    },
+    {
+      "questionId": "572ffd75b2c2fd14005686e5",
+      "original": "When did the last glacial start?",
+      "paraphrase": "What was the start date of the most recent glacial period?",
+      "ok": true
+    },
+    {
+      "questionId": "56f8720eaef2371900626092",
+      "original": "Who is the English translator of this hymn?",
+      "paraphrase": "What is the name of the English translator of this hymn?",
+      "ok": true
+    },
+    {
+      "questionId": "57303048947a6a140053d255",
+      "original": "What department in the U.S. spearheaded the efforts against Islamism? ",
+      "paraphrase": "Which department in the United States led the initiatives opposing Islamism?",
+      "ok": true
+    },
+    {
+      "questionId": "5725b5a689a1e219009abd2a",
+      "original": "On what date did Henry Kissinger negotiate an Israeli troop withdrawal from the Sinai Peninsula?",
+      "paraphrase": "When did Henry Kissinger negotiate an Israeli troop withdrawal from the Sinai Peninsula?",
+      "ok": true
+    },
+    {
+      "questionId": "56f845dba6d7ea1400e17519",
+      "original": "How did Luther broaden the Reformation in terms of prophecy?",
+      "paraphrase": "How did Luther expand the Reformation regarding prophecy?",
+      "ok": true
+    },
+    {
+      "questionId": "5726bdc6f1498d1400e8e9c1",
+      "original": "Approximately how many textiles comprise the museum's collections of South and South-East Asian art?",
+      "paraphrase": "How many textile items are in the museum's collection of South and South-East Asian art?",
+      "ok": true
+    },
+    {
+      "questionId": "572684365951b619008f753f",
+      "original": "Juvenile and adult  beroe lack what?",
+      "paraphrase": "What do juvenile and adult beroe lack?",
+      "ok": true
+    },
+    {
+      "questionId": "5726516a708984140094c224",
+      "original": "Why are researchers struggling to identify the history of the plague?",
+      "paraphrase": "Why is it difficult for researchers to determine the history of the plague?",
+      "ok": true
+    },
+    {
+      "questionId": "56d9a026dc89441400fdb632",
+      "original": "Who suffered a broken arm in the NFC Championship Game?",
+      "paraphrase": "Which player had a broken arm during the NFC Championship Game?",
+      "ok": true
+    },
+    {
+      "questionId": "5730bb522461fd1900a9d015",
+      "original": "Who does Edward Said say is being attacked by US imperialism?",
+      "paraphrase": "Who does Edward Said claim is targeted by US imperialism?",
+      "ok": true
+    },
+    {
+      "questionId": "5730bf03069b5314008322eb",
+      "original": "The UMC supports federal funding for research on embryos created for what purpose?",
+      "paraphrase": "What purpose does the UMC support for federal funding of research on embryos created for that reason?",
+      "ok": true
+    }
+  ]
+}

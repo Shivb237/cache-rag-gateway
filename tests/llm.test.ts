@@ -47,6 +47,6 @@ describe("provider registry", () => {
   });
 
   it("rejects unknown names with the list of known ones", () => {
-    expect(() => createProvider("nope", { model: "m" })).toThrow(/Known: ollama, openai-compatible/);
+    expect(() => createProvider("nope", { model: "m" })).toThrow(/Known: ollama, anthropic, openai-compatible/);
   });
 });

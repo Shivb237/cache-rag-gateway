@@ -1,0 +1,9 @@
+# Prompt-caching arms for a provider with explicit caching (Claude). Each arm gets its own cache namespace.
+# "off" is the control (no breakpoint) and is copied automatically as "off-twin".
+control: off
+arms:
+  - { name: off,                  exact: false, semantic: false, retrieval: false, prefix: false, order: relevance }
+  - { name: cache-relevance,      exact: false, semantic: false, retrieval: false, prefix: true,  order: relevance }
+  - { name: cache-sorted,         exact: false, semantic: false, retrieval: false, prefix: true,  order: sorted }
+  - { name: sorted+retrieval-0.75, exact: false, semantic: false, retrieval: true, retrievalThreshold: 0.75, prefix: true, order: sorted }
+  - { name: sorted+retrieval-0.65, exact: false, semantic: false, retrieval: true, retrievalThreshold: 0.65, prefix: true, order: sorted }

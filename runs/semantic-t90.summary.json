@@ -1,0 +1,126 @@
+{
+  "name": "semantic-t90",
+  "when": "2026-10-06T19:45:53.613Z",
+  "requests": 595,
+  "workload": {
+    "kind": "semantic",
+    "originals": 200,
+    "paraphrases": 195,
+    "hard": 150,
+    "easy": 50
+  },
+  "warmupCalls": 1,
+  "wallClockSecs": 2197.7,
+  "metrics": {
+    "exactMatch": 0.5244,
+    "f1": 0.6946,
+    "recallAt1": 0.8168,
+    "recallAt5": 0.9697,
+    "cacheHitRate": 0.2655,
+    "hitsByLayer": {
+      "exact": 0,
+      "semantic": 158
+    },
+    "llmCalls": 437,
+    "byKind": {
+      "original": {
+        "requests": 200,
+        "hits": 2,
+        "hitRate": 0.01,
+        "wrongServed": 0,
+        "wrongServedRate": 0,
+        "f1": 0.696
+      },
+      "hard": {
+        "requests": 150,
+        "hits": 11,
+        "hitRate": 0.0733,
+        "wrongServed": 2,
+        "wrongServedRate": 0.0133,
+        "f1": 0.6897
+      },
+      "easy": {
+        "requests": 50,
+        "hits": 1,
+        "hitRate": 0.02,
+        "wrongServed": 0,
+        "wrongServedRate": 0,
+        "f1": 0.7246
+      },
+      "paraphrase": {
+        "requests": 195,
+        "hits": 144,
+        "hitRate": 0.7385,
+        "wrongServed": 0,
+        "wrongServedRate": 0,
+        "f1": 0.6892
+      }
+    },
+    "latencyMs": {
+      "p50": 4492.1,
+      "p95": 6848.6,
+      "p99": 8548.8
+    },
+    "latencyMsHitsOnly": {
+      "p50": 12.3,
+      "p95": 19.2
+    },
+    "latencyMsMissesOnly": {
+      "p50": 4881.8,
+      "p95": 7277.4
+    },
+    "ttftMs": {
+      "p50": 4231,
+      "p95": 6328
+    },
+    "meanPromptTokens": 687,
+    "meanCompletionTokens": 6.5,
+    "totalTokensProcessed": 412633,
+    "sameAnswerAsEarlierRun": null,
+    "costUsd": 0
+  },
+  "setup": {
+    "seed": 42,
+    "llm": {
+      "provider": "ollama",
+      "model": "qwen3:4b-instruct",
+      "modelDigest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+      "temperature": 0,
+      "spendCapUsd": 0
+    },
+    "embedding": {
+      "model": "BAAI/bge-small-en-v1.5",
+      "revision": "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a"
+    },
+    "topK": 5,
+    "caches": {
+      "exact": {
+        "enabled": false,
+        "ttlSeconds": 3600
+      },
+      "semantic": {
+        "enabled": true,
+        "threshold": 0.9,
+        "ttlSeconds": 3600
+      },
+      "retrieval": {
+        "enabled": false,
+        "ttlSeconds": 3600
+      },
+      "promptPrefix": {
+        "enabled": false
+      }
+    },
+    "answerVersion": "e89993db5fb63b0f4bd8337158befd4c7681ed792c98f8e3bff7c7d408d68572",
+    "subsetSha256": "b179a40cb8675ce513ef1645b2dd63625c4221d2faf9b01242fea37eb14efe18",
+    "indexMeta": {
+      "model": "BAAI/bge-small-en-v1.5",
+      "revision": "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a",
+      "subsetSha256": "b179a40cb8675ce513ef1645b2dd63625c4221d2faf9b01242fea37eb14efe18",
+      "dim": 384,
+      "count": 500
+    },
+    "node": "v25.9.0",
+    "comparedTo": null
+  }
+}

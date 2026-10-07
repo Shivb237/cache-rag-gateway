@@ -1,0 +1,89 @@
+{
+  "name": "exact-r50",
+  "when": "2026-10-06T18:41:41.436Z",
+  "requests": 200,
+  "workload": {
+    "uniqueQuestions": 104,
+    "repeats": 96,
+    "repeatRateRequested": 0.5,
+    "repeatRateRealized": 0.48
+  },
+  "warmupCalls": 1,
+  "wallClockSecs": 601.3,
+  "metrics": {
+    "exactMatch": 0.45,
+    "f1": 0.663,
+    "recallAt1": 0.82,
+    "recallAt5": 0.965,
+    "cacheHitRate": 0.48,
+    "llmCalls": 104,
+    "latencyMs": {
+      "p50": 3591.2,
+      "p95": 7428,
+      "p99": 8957.2
+    },
+    "latencyMsHitsOnly": {
+      "p50": 0.2,
+      "p95": 0.7
+    },
+    "latencyMsMissesOnly": {
+      "p50": 5730.2,
+      "p95": 8091.7
+    },
+    "ttftMs": {
+      "p50": 3395,
+      "p95": 6782
+    },
+    "meanPromptTokens": 479,
+    "meanCompletionTokens": 4.6,
+    "totalTokensProcessed": 96758,
+    "sameAnswerAsEarlierRun": {
+      "compared": 200,
+      "rate": 1
+    },
+    "costUsd": 0
+  },
+  "setup": {
+    "seed": 42,
+    "llm": {
+      "provider": "ollama",
+      "model": "qwen3:4b-instruct",
+      "modelDigest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+      "temperature": 0,
+      "spendCapUsd": 0
+    },
+    "embedding": {
+      "model": "BAAI/bge-small-en-v1.5",
+      "revision": "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a"
+    },
+    "topK": 5,
+    "caches": {
+      "exact": {
+        "enabled": true,
+        "ttlSeconds": 3600
+      },
+      "semantic": {
+        "enabled": true,
+        "threshold": 0.9
+      },
+      "retrieval": {
+        "enabled": true,
+        "ttlSeconds": 3600
+      },
+      "promptPrefix": {
+        "enabled": true
+      }
+    },
+    "answerVersion": "e89993db5fb63b0f4bd8337158befd4c7681ed792c98f8e3bff7c7d408d68572",
+    "subsetSha256": "b179a40cb8675ce513ef1645b2dd63625c4221d2faf9b01242fea37eb14efe18",
+    "indexMeta": {
+      "model": "BAAI/bge-small-en-v1.5",
+      "revision": "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a",
+      "subsetSha256": "b179a40cb8675ce513ef1645b2dd63625c4221d2faf9b01242fea37eb14efe18",
+      "dim": 384,
+      "count": 500
+    },
+    "node": "v25.9.0",
+    "comparedTo": "baseline"
+  }
+}

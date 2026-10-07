@@ -1,9 +1,11 @@
+import { anthropic } from "./anthropic.js";
 import { ollama } from "./ollama.js";
 import { openaiCompatible } from "./openaiCompatible.js";
 import type { LlmProvider, ProviderFactory, ProviderSettings } from "./types.js";
 
 const registry = new Map<string, ProviderFactory>([
   ["ollama", ollama],
+  ["anthropic", anthropic],
   ["openai-compatible", openaiCompatible],
 ]);
 

@@ -1,0 +1,18 @@
+# Keep secrets, local state and bulky or irrelevant files out of the image.
+.env
+.env.*
+!.env.example
+.git
+node_modules
+.cache
+runs
+reports
+docs
+data/raw
+CLAUDE.md
+.impeccable
+*.log
+.DS_Store
+tests
+eval
+Dockerfile

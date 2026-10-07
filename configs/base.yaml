@@ -7,11 +7,21 @@ llm:
   spendCapUsd: 0
 embedding:
   model: BAAI/bge-small-en-v1.5
-  revision: TBD-pinned-in-milestone-1  # exact HF commit hash
+  revision: 5c38ec7c405ec4b44b94cc5a9bb96e735b38267a  # BAAI/bge-small-en-v1.5 commit, looked up 2026-10-06
+dataset:
+  squadPath: data/raw/dev-v1.1.json
+  subsetPath: data/eval/squad-subset.json
+  indexPath: .cache/index/squad-subset
+  subsetParagraphs: 500  # starting guess; revisit after measuring embed and answer times in Milestone 2
+prompt:
+  passageOrder: relevance
+eval:
+  sampleQuestions: 200
+  warmupCalls: 1
 retrieval:
   topK: 5
 caches:
   exact: { enabled: true, ttlSeconds: 3600 }
-  semantic: { enabled: true, threshold: 0.9 }  # placeholder; the real value comes from the M4 sweep
-  retrieval: { enabled: true, ttlSeconds: 3600 }
+  semantic: { enabled: true, threshold: 0.9, ttlSeconds: 3600 }  # placeholder; the real value comes from the M4 sweep
+  retrieval: { enabled: false, ttlSeconds: 3600, threshold: 0.85 }  # off by default; M5 measures it through ablation configs
   promptPrefix: { enabled: true }

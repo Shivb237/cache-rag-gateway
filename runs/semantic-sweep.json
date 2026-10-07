@@ -1,0 +1,335 @@
+{
+  "seed": 42,
+  "embedding": {
+    "model": "BAAI/bge-small-en-v1.5",
+    "revision": "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a"
+  },
+  "cacheSize": 200,
+  "queries": {
+    "paraphrase": 195,
+    "hard": 619,
+    "easy": 200
+  },
+  "rows": [
+    {
+      "threshold": 0.6,
+      "paraphraseHit": 1,
+      "paraphraseHitCorrect": 1,
+      "hardNegHit": 0.727,
+      "hardNegWrongServed": 0.7173,
+      "easyNegWrongServed": 0.525
+    },
+    {
+      "threshold": 0.61,
+      "paraphraseHit": 1,
+      "paraphraseHitCorrect": 1,
+      "hardNegHit": 0.6963,
+      "hardNegWrongServed": 0.6866,
+      "easyNegWrongServed": 0.51
+    },
+    {
+      "threshold": 0.62,
+      "paraphraseHit": 1,
+      "paraphraseHitCorrect": 1,
+      "hardNegHit": 0.6543,
+      "hardNegWrongServed": 0.6446,
+      "easyNegWrongServed": 0.47
+    },
+    {
+      "threshold": 0.63,
+      "paraphraseHit": 1,
+      "paraphraseHitCorrect": 1,
+      "hardNegHit": 0.6155,
+      "hardNegWrongServed": 0.6058,
+      "easyNegWrongServed": 0.45
+    },
+    {
+      "threshold": 0.64,
+      "paraphraseHit": 1,
+      "paraphraseHitCorrect": 1,
+      "hardNegHit": 0.5784,
+      "hardNegWrongServed": 0.5687,
+      "easyNegWrongServed": 0.44
+    },
+    {
+      "threshold": 0.65,
+      "paraphraseHit": 1,
+      "paraphraseHitCorrect": 1,
+      "hardNegHit": 0.5493,
+      "hardNegWrongServed": 0.5396,
+      "easyNegWrongServed": 0.415
+    },
+    {
+      "threshold": 0.66,
+      "paraphraseHit": 1,
+      "paraphraseHitCorrect": 1,
+      "hardNegHit": 0.5137,
+      "hardNegWrongServed": 0.504,
+      "easyNegWrongServed": 0.36
+    },
+    {
+      "threshold": 0.67,
+      "paraphraseHit": 1,
+      "paraphraseHitCorrect": 1,
+      "hardNegHit": 0.4717,
+      "hardNegWrongServed": 0.462,
+      "easyNegWrongServed": 0.335
+    },
+    {
+      "threshold": 0.68,
+      "paraphraseHit": 1,
+      "paraphraseHitCorrect": 1,
+      "hardNegHit": 0.433,
+      "hardNegWrongServed": 0.4233,
+      "easyNegWrongServed": 0.28
+    },
+    {
+      "threshold": 0.69,
+      "paraphraseHit": 1,
+      "paraphraseHitCorrect": 1,
+      "hardNegHit": 0.4055,
+      "hardNegWrongServed": 0.3958,
+      "easyNegWrongServed": 0.25
+    },
+    {
+      "threshold": 0.7,
+      "paraphraseHit": 1,
+      "paraphraseHitCorrect": 1,
+      "hardNegHit": 0.3716,
+      "hardNegWrongServed": 0.3619,
+      "easyNegWrongServed": 0.21
+    },
+    {
+      "threshold": 0.71,
+      "paraphraseHit": 1,
+      "paraphraseHitCorrect": 1,
+      "hardNegHit": 0.3457,
+      "hardNegWrongServed": 0.336,
+      "easyNegWrongServed": 0.17
+    },
+    {
+      "threshold": 0.72,
+      "paraphraseHit": 1,
+      "paraphraseHitCorrect": 1,
+      "hardNegHit": 0.315,
+      "hardNegWrongServed": 0.3053,
+      "easyNegWrongServed": 0.17
+    },
+    {
+      "threshold": 0.73,
+      "paraphraseHit": 1,
+      "paraphraseHitCorrect": 1,
+      "hardNegHit": 0.2989,
+      "hardNegWrongServed": 0.2892,
+      "easyNegWrongServed": 0.16
+    },
+    {
+      "threshold": 0.74,
+      "paraphraseHit": 1,
+      "paraphraseHitCorrect": 1,
+      "hardNegHit": 0.2649,
+      "hardNegWrongServed": 0.2553,
+      "easyNegWrongServed": 0.135
+    },
+    {
+      "threshold": 0.75,
+      "paraphraseHit": 1,
+      "paraphraseHitCorrect": 1,
+      "hardNegHit": 0.2359,
+      "hardNegWrongServed": 0.2262,
+      "easyNegWrongServed": 0.11
+    },
+    {
+      "threshold": 0.76,
+      "paraphraseHit": 0.9949,
+      "paraphraseHitCorrect": 0.9949,
+      "hardNegHit": 0.2116,
+      "hardNegWrongServed": 0.2019,
+      "easyNegWrongServed": 0.105
+    },
+    {
+      "threshold": 0.77,
+      "paraphraseHit": 0.9949,
+      "paraphraseHitCorrect": 0.9949,
+      "hardNegHit": 0.1922,
+      "hardNegWrongServed": 0.1826,
+      "easyNegWrongServed": 0.1
+    },
+    {
+      "threshold": 0.78,
+      "paraphraseHit": 0.9949,
+      "paraphraseHitCorrect": 0.9949,
+      "hardNegHit": 0.1664,
+      "hardNegWrongServed": 0.1583,
+      "easyNegWrongServed": 0.085
+    },
+    {
+      "threshold": 0.79,
+      "paraphraseHit": 0.9897,
+      "paraphraseHitCorrect": 0.9897,
+      "hardNegHit": 0.1405,
+      "hardNegWrongServed": 0.1325,
+      "easyNegWrongServed": 0.085
+    },
+    {
+      "threshold": 0.8,
+      "paraphraseHit": 0.9846,
+      "paraphraseHitCorrect": 0.9846,
+      "hardNegHit": 0.1179,
+      "hardNegWrongServed": 0.1099,
+      "easyNegWrongServed": 0.06
+    },
+    {
+      "threshold": 0.81,
+      "paraphraseHit": 0.9744,
+      "paraphraseHitCorrect": 0.9744,
+      "hardNegHit": 0.1131,
+      "hardNegWrongServed": 0.105,
+      "easyNegWrongServed": 0.055
+    },
+    {
+      "threshold": 0.82,
+      "paraphraseHit": 0.959,
+      "paraphraseHitCorrect": 0.959,
+      "hardNegHit": 0.1002,
+      "hardNegWrongServed": 0.0921,
+      "easyNegWrongServed": 0.045
+    },
+    {
+      "threshold": 0.83,
+      "paraphraseHit": 0.9436,
+      "paraphraseHitCorrect": 0.9436,
+      "hardNegHit": 0.0872,
+      "hardNegWrongServed": 0.0792,
+      "easyNegWrongServed": 0.035
+    },
+    {
+      "threshold": 0.84,
+      "paraphraseHit": 0.9333,
+      "paraphraseHitCorrect": 0.9333,
+      "hardNegHit": 0.0775,
+      "hardNegWrongServed": 0.0695,
+      "easyNegWrongServed": 0.025
+    },
+    {
+      "threshold": 0.85,
+      "paraphraseHit": 0.9077,
+      "paraphraseHitCorrect": 0.9077,
+      "hardNegHit": 0.0662,
+      "hardNegWrongServed": 0.0582,
+      "easyNegWrongServed": 0.015
+    },
+    {
+      "threshold": 0.86,
+      "paraphraseHit": 0.9026,
+      "paraphraseHitCorrect": 0.9026,
+      "hardNegHit": 0.0549,
+      "hardNegWrongServed": 0.0485,
+      "easyNegWrongServed": 0.005
+    },
+    {
+      "threshold": 0.87,
+      "paraphraseHit": 0.8769,
+      "paraphraseHitCorrect": 0.8769,
+      "hardNegHit": 0.0501,
+      "hardNegWrongServed": 0.0436,
+      "easyNegWrongServed": 0.005
+    },
+    {
+      "threshold": 0.88,
+      "paraphraseHit": 0.8205,
+      "paraphraseHitCorrect": 0.8205,
+      "hardNegHit": 0.0436,
+      "hardNegWrongServed": 0.0388,
+      "easyNegWrongServed": 0.005
+    },
+    {
+      "threshold": 0.89,
+      "paraphraseHit": 0.7744,
+      "paraphraseHitCorrect": 0.7744,
+      "hardNegHit": 0.0404,
+      "hardNegWrongServed": 0.0355,
+      "easyNegWrongServed": 0.005
+    },
+    {
+      "threshold": 0.9,
+      "paraphraseHit": 0.7436,
+      "paraphraseHitCorrect": 0.7436,
+      "hardNegHit": 0.0339,
+      "hardNegWrongServed": 0.0291,
+      "easyNegWrongServed": 0
+    },
+    {
+      "threshold": 0.91,
+      "paraphraseHit": 0.7077,
+      "paraphraseHitCorrect": 0.7077,
+      "hardNegHit": 0.0307,
+      "hardNegWrongServed": 0.0258,
+      "easyNegWrongServed": 0
+    },
+    {
+      "threshold": 0.92,
+      "paraphraseHit": 0.6205,
+      "paraphraseHitCorrect": 0.6205,
+      "hardNegHit": 0.0242,
+      "hardNegWrongServed": 0.0194,
+      "easyNegWrongServed": 0
+    },
+    {
+      "threshold": 0.93,
+      "paraphraseHit": 0.5385,
+      "paraphraseHitCorrect": 0.5385,
+      "hardNegHit": 0.0178,
+      "hardNegWrongServed": 0.0145,
+      "easyNegWrongServed": 0
+    },
+    {
+      "threshold": 0.94,
+      "paraphraseHit": 0.4821,
+      "paraphraseHitCorrect": 0.4821,
+      "hardNegHit": 0.0113,
+      "hardNegWrongServed": 0.0081,
+      "easyNegWrongServed": 0
+    },
+    {
+      "threshold": 0.95,
+      "paraphraseHit": 0.359,
+      "paraphraseHitCorrect": 0.359,
+      "hardNegHit": 0.0081,
+      "hardNegWrongServed": 0.0048,
+      "easyNegWrongServed": 0
+    },
+    {
+      "threshold": 0.96,
+      "paraphraseHit": 0.3026,
+      "paraphraseHitCorrect": 0.3026,
+      "hardNegHit": 0.0081,
+      "hardNegWrongServed": 0.0048,
+      "easyNegWrongServed": 0
+    },
+    {
+      "threshold": 0.97,
+      "paraphraseHit": 0.1795,
+      "paraphraseHitCorrect": 0.1795,
+      "hardNegHit": 0.0065,
+      "hardNegWrongServed": 0.0048,
+      "easyNegWrongServed": 0
+    },
+    {
+      "threshold": 0.98,
+      "paraphraseHit": 0.0872,
+      "paraphraseHitCorrect": 0.0872,
+      "hardNegHit": 0.0032,
+      "hardNegWrongServed": 0.0016,
+      "easyNegWrongServed": 0
+    },
+    {
+      "threshold": 0.99,
+      "paraphraseHit": 0.0154,
+      "paraphraseHitCorrect": 0.0154,
+      "hardNegHit": 0.0016,
+      "hardNegWrongServed": 0,
+      "easyNegWrongServed": 0
+    }
+  ]
+}

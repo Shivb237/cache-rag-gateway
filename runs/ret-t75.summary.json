@@ -1,0 +1,106 @@
+{
+  "name": "ret-t75",
+  "when": "2026-10-07T01:25:11.050Z",
+  "requests": 100,
+  "workload": {
+    "kind": "prefix",
+    "questions": 100,
+    "order": "shuffled",
+    "paragraphs": 20
+  },
+  "warmupCalls": 1,
+  "wallClockSecs": 279.4,
+  "metrics": {
+    "exactMatch": 0.55,
+    "f1": 0.7439,
+    "recallAt1": 0.83,
+    "recallAt5": 0.97,
+    "cacheHitRate": 0,
+    "retrievalCacheHitRate": 0.36,
+    "hitsByLayer": {
+      "exact": 0,
+      "semantic": 0
+    },
+    "llmCalls": 100,
+    "byKind": {
+      "original": {
+        "requests": 100,
+        "hits": 0,
+        "hitRate": 0,
+        "wrongServed": 0,
+        "wrongServedRate": 0,
+        "f1": 0.7439
+      }
+    },
+    "latencyMs": {
+      "p50": 3278.3,
+      "p95": 5887.8,
+      "p99": 6746.9
+    },
+    "latencyMsHitsOnly": null,
+    "latencyMsMissesOnly": {
+      "p50": 3278.3,
+      "p95": 5887.8
+    },
+    "promptEvalMs": {
+      "mean": 2413,
+      "p50": 2960,
+      "p95": 5457,
+      "under1s": 0.41
+    },
+    "ttftMs": {
+      "p50": 3010,
+      "p95": 5494
+    },
+    "meanPromptTokens": 947,
+    "meanCompletionTokens": 8.5,
+    "totalTokensProcessed": 95561,
+    "sameAnswerAsEarlierRun": null,
+    "costUsd": 0
+  },
+  "setup": {
+    "seed": 42,
+    "llm": {
+      "provider": "ollama",
+      "model": "qwen3:4b-instruct",
+      "modelDigest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+      "temperature": 0,
+      "spendCapUsd": 0
+    },
+    "embedding": {
+      "model": "BAAI/bge-small-en-v1.5",
+      "revision": "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a"
+    },
+    "topK": 5,
+    "caches": {
+      "exact": {
+        "enabled": false,
+        "ttlSeconds": 3600
+      },
+      "semantic": {
+        "enabled": false,
+        "threshold": 0.9,
+        "ttlSeconds": 3600
+      },
+      "retrieval": {
+        "enabled": true,
+        "ttlSeconds": 3600,
+        "threshold": 0.75
+      },
+      "promptPrefix": {
+        "enabled": true
+      }
+    },
+    "answerVersion": "1f7f44817a47e374a1eb13b562633ceb9518d2f0df5e4718bc0bbf52a2be478e",
+    "subsetSha256": "b179a40cb8675ce513ef1645b2dd63625c4221d2faf9b01242fea37eb14efe18",
+    "indexMeta": {
+      "model": "BAAI/bge-small-en-v1.5",
+      "revision": "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a",
+      "subsetSha256": "b179a40cb8675ce513ef1645b2dd63625c4221d2faf9b01242fea37eb14efe18",
+      "dim": 384,
+      "count": 500
+    },
+    "node": "v25.9.0",
+    "comparedTo": null
+  }
+}

@@ -1,0 +1,8 @@
+# Only the model server's prefix cache is on. Passages in relevance order (the default layout).
+caches:
+  exact: { enabled: false }
+  semantic: { enabled: false }
+  retrieval: { enabled: false }
+  promptPrefix: { enabled: true }
+prompt:
+  passageOrder: relevance
