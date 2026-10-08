@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 420" width="1000" height="420" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" role="img" aria-labelledby="t d">
+<title id="t">One cache, two very different results</title>
+<desc id="d">On a MacBook Air with a local model, caching cut the time to first token from 3–4 s to 0.3 s. On Claude Sonnet 5.5, the same caching raised cost by +18–25%.</desc>
+<rect width="1000" height="420" fill="#f3f4f6"/>
+<text x="40" y="64" font-size="34" font-weight="800" fill="#0b0b0b" text-anchor="start">One cache. Two very different results.</text>
+<rect x="40" y="96" width="440" height="250" rx="18" fill="#ffffff" stroke="#d6d8de" stroke-width="2"/>
+<rect x="68" y="124" width="12" height="12" rx="3" fill="#2a78d6"/>
+<text x="90" y="136" font-size="20" font-weight="600" fill="#52514e" text-anchor="start">MacBook Air, local Qwen3 4B</text>
+<text x="68" y="228" font-size="76" font-weight="800" fill="#0b0b0b" text-anchor="start">0.3 s</text>
+<text x="68" y="272" font-size="24" font-weight="600" fill="#0b0b0b" text-anchor="start">time to first token</text>
+<text x="68" y="306" font-size="20" font-weight="400" fill="#52514e" text-anchor="start">down from 3–4 s</text>
+<rect x="520" y="96" width="440" height="250" rx="18" fill="#ffffff" stroke="#d6d8de" stroke-width="2"/>
+<rect x="548" y="124" width="12" height="12" rx="3" fill="#d95926"/>
+<text x="570" y="136" font-size="20" font-weight="600" fill="#52514e" text-anchor="start">Claude Sonnet 5.5</text>
+<text x="548" y="228" font-size="76" font-weight="800" fill="#0b0b0b" text-anchor="start">+18–25%</text>
+<text x="548" y="272" font-size="24" font-weight="600" fill="#0b0b0b" text-anchor="start">cost with prompt caching</text>
+<text x="548" y="306" font-size="20" font-weight="400" fill="#52514e" text-anchor="start">until prompts repeat</text>
+<text x="40" y="388" font-size="16" font-weight="400" fill="#52514e" text-anchor="start">Same RAG pipeline, same dataset (SQuAD). Every number is from logged runs.</text>
+</svg>

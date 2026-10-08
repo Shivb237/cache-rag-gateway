@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 710" width="520" height="710" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" role="img" aria-labelledby="t d">
+<title id="t">Prompt caching on Claude: cost per 100 questions</title>
+<desc id="d">Clustered questions: No caching $0.295 (+0%), Caching, relevance order $0.349 (+18%), Caching, sorted passages $0.311 (+5%), Sorted + retrieval cache 0.75 $0.274 (-7%), Sorted + retrieval cache 0.65 $0.228 (-23%). Diverse questions: No caching $0.296 (+0%), Caching, relevance order $0.367 (+24%), Caching, sorted passages $0.368 (+24%), Sorted + retrieval cache 0.75 $0.369 (+25%), Sorted + retrieval cache 0.65 $0.355 (+20%)</desc>
+<rect width="520" height="710" fill="#ffffff"/>
+<text x="20" y="34" font-size="20" font-weight="700" fill="#0b0b0b">Prompt caching on Claude:</text>
+<text x="20" y="58" font-size="20" font-weight="700" fill="#0b0b0b">it only paid when prompts repeated</text>
+<text x="20" y="86" font-size="13" font-weight="400" fill="#52514e">Cost per 100 questions, Claude Sonnet 5.5.</text>
+<text x="20" y="105" font-size="13" font-weight="400" fill="#52514e">Retrieval cache threshold: how alike two questions must be to share passages.</text>
+<rect x="20" y="130" width="12" height="12" rx="2" fill="#898781"/>
+<text x="40" y="141" font-size="13" font-weight="400" fill="#52514e">No caching (control)</text>
+<rect x="230" y="130" width="12" height="12" rx="2" fill="#2a78d6"/>
+<text x="250" y="141" font-size="13" font-weight="400" fill="#52514e">Prompt caching setups</text>
+<text x="20" y="176" font-size="15" font-weight="700" fill="#0b0b0b">Clustered questions</text>
+<text x="20" y="194" font-size="12" font-weight="400" fill="#898781">100 questions about the same 20 paragraphs</text>
+<line x1="214" y1="206" x2="214" y2="388" stroke="#c3c2b7" stroke-width="1"/>
+<text x="20" y="227" font-size="13" font-weight="400" fill="#0b0b0b">No caching</text>
+<path d="M214,212 h136.25039999999998 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-136.25039999999998 z" fill="#898781"/>
+<text x="362.2504" y="227" font-size="13" font-weight="600" fill="#0b0b0b">$0.295</text>
+<text x="20" y="273" font-size="13" font-weight="400" fill="#0b0b0b">Caching, relevance order</text>
+<path d="M214,258 h161.9329375 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-161.9329375 z" fill="#2a78d6"/>
+<text x="387.9329375" y="273" font-size="13" font-weight="600" fill="#0b0b0b">$0.349</text>
+<text x="439.9329375" y="273" font-size="13" font-weight="600" fill="#52514e">+18%</text>
+<text x="20" y="307" font-size="13" font-weight="400" fill="#0b0b0b">Caching, sorted passages</text>
+<path d="M214,292 h143.66325 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-143.66325 z" fill="#2a78d6"/>
+<text x="369.66325" y="307" font-size="13" font-weight="600" fill="#0b0b0b">$0.311</text>
+<text x="421.66325" y="307" font-size="13" font-weight="600" fill="#52514e">+5%</text>
+<text x="20" y="341" font-size="13" font-weight="400" fill="#0b0b0b">Sorted + retrieval cache 0.75</text>
+<path d="M214,326 h126.18291749999997 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-126.18291749999997 z" fill="#2a78d6"/>
+<text x="352.1829175" y="341" font-size="13" font-weight="600" fill="#0b0b0b">$0.274</text>
+<text x="404.1829175" y="341" font-size="13" font-weight="600" fill="#52514e">-7%</text>
+<text x="20" y="375" font-size="13" font-weight="400" fill="#0b0b0b">Sorted + retrieval cache 0.65</text>
+<path d="M214,360 h104.16681 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-104.16681 z" fill="#2a78d6"/>
+<text x="330.16681" y="375" font-size="13" font-weight="600" fill="#0b0b0b">$0.228</text>
+<text x="382.16681" y="375" font-size="13" font-weight="600" fill="#52514e">-23%</text>
+<text x="20" y="426" font-size="15" font-weight="700" fill="#0b0b0b">Diverse questions</text>
+<text x="20" y="444" font-size="12" font-weight="400" fill="#898781">100 questions about different paragraphs</text>
+<line x1="214" y1="456" x2="214" y2="638" stroke="#c3c2b7" stroke-width="1"/>
+<text x="20" y="477" font-size="13" font-weight="400" fill="#0b0b0b">No caching</text>
+<path d="M214,462 h136.5316 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-136.5316 z" fill="#898781"/>
+<text x="362.5316" y="477" font-size="13" font-weight="600" fill="#0b0b0b">$0.296</text>
+<text x="20" y="523" font-size="13" font-weight="400" fill="#0b0b0b">Caching, relevance order</text>
+<path d="M214,508 h170.21954999999997 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-170.21954999999997 z" fill="#2a78d6"/>
+<text x="396.21954999999997" y="523" font-size="13" font-weight="600" fill="#0b0b0b">$0.367</text>
+<text x="448.21954999999997" y="523" font-size="13" font-weight="600" fill="#52514e">+24%</text>
+<text x="20" y="557" font-size="13" font-weight="400" fill="#0b0b0b">Caching, sorted passages</text>
+<path d="M214,542 h170.59955 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-170.59955 z" fill="#2a78d6"/>
+<text x="396.59955" y="557" font-size="13" font-weight="600" fill="#0b0b0b">$0.368</text>
+<text x="448.59955" y="557" font-size="13" font-weight="600" fill="#52514e">+24%</text>
+<text x="20" y="591" font-size="13" font-weight="400" fill="#0b0b0b">Sorted + retrieval cache 0.75</text>
+<path d="M214,576 h171.04367499999998 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-171.04367499999998 z" fill="#2a78d6"/>
+<text x="397.043675" y="591" font-size="13" font-weight="600" fill="#0b0b0b">$0.369</text>
+<text x="449.043675" y="591" font-size="13" font-weight="600" fill="#52514e">+25%</text>
+<text x="20" y="625" font-size="13" font-weight="400" fill="#0b0b0b">Sorted + retrieval cache 0.65</text>
+<path d="M214,610 h164.8266375 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-164.8266375 z" fill="#2a78d6"/>
+<text x="390.8266375" y="625" font-size="13" font-weight="600" fill="#0b0b0b">$0.355</text>
+<text x="442.8266375" y="625" font-size="13" font-weight="600" fill="#52514e">+20%</text>
+<text x="20" y="676" font-size="11" font-weight="400" fill="#898781">Source: runs/prefix-claude-*.summary.json, drawn by scripts/chart-claude-cost.ts.</text>
+<text x="20" y="691" font-size="11" font-weight="400" fill="#898781">Control and its identical copy: $0.296 vs $0.295 (noise floor).</text>
+</svg>

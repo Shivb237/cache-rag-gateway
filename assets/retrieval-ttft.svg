@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 826" width="520" height="826" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" role="img" aria-labelledby="t d">
+<title id="t">Retrieval cache on a local model: time to first token</title>
+<desc id="d">No retrieval cache, run 1: median time to first token 2.96 s, 19% of requests with prompt time under 1 s; No retrieval cache, run 2: median time to first token 3.89 s, 19% of requests with prompt time under 1 s; Retrieval cache, threshold 0.85: median time to first token 3.75 s, 26% of requests with prompt time under 1 s; Retrieval cache, threshold 0.75: median time to first token 3.01 s, 41% of requests with prompt time under 1 s; Retrieval cache, threshold 0.65: median time to first token 0.29 s, 55% of requests with prompt time under 1 s; Retrieval cache, 0.65 (repeat run): median time to first token 0.31 s, 55% of requests with prompt time under 1 s</desc>
+<rect width="520" height="826" fill="#ffffff"/>
+<text x="20" y="34" font-size="20" font-weight="700" fill="#0b0b0b">At threshold 0.65, the first token</text>
+<text x="20" y="58" font-size="20" font-weight="700" fill="#0b0b0b">arrived about 10x sooner</text>
+<text x="20" y="86" font-size="13" font-weight="400" fill="#52514e">Retrieval cache, local model (Qwen3 4B on a MacBook Air M4).</text>
+<text x="20" y="105" font-size="13" font-weight="400" fill="#52514e">100 shuffled questions about 20 paragraphs.</text>
+<text x="20" y="124" font-size="13" font-weight="400" fill="#52514e">Threshold: how alike two questions must be to share passages.</text>
+<text x="20" y="143" font-size="13" font-weight="400" fill="#52514e">The model's own prompt cache was emptied before each run.</text>
+<rect x="20" y="170" width="12" height="12" rx="2" fill="#898781"/>
+<text x="40" y="181" font-size="13" font-weight="400" fill="#52514e">No retrieval cache (control)</text>
+<rect x="250" y="170" width="12" height="12" rx="2" fill="#2a78d6"/>
+<text x="270" y="181" font-size="13" font-weight="400" fill="#52514e">Retrieval cache</text>
+<text x="20" y="214" font-size="15" font-weight="700" fill="#0b0b0b">Median time to first token</text>
+<text x="20" y="232" font-size="12" font-weight="400" fill="#898781">seconds, lower is better</text>
+<line x1="176" y1="244" x2="176" y2="472" stroke="#c3c2b7" stroke-width="1"/>
+<text x="20" y="265" font-size="14" font-weight="400" fill="#0b0b0b">No cache, run 1</text>
+<path d="M176,250 h180.725 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-180.725 z" fill="#898781"/>
+<text x="368.725" y="265" font-size="14" font-weight="600" fill="#0b0b0b">2.96 s</text>
+<text x="20" y="301" font-size="14" font-weight="400" fill="#0b0b0b">No cache, run 2</text>
+<path d="M176,286 h239.34375 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-239.34375 z" fill="#898781"/>
+<text x="427.34375" y="301" font-size="14" font-weight="600" fill="#0b0b0b">3.89 s</text>
+<text x="20" y="349" font-size="14" font-weight="400" fill="#0b0b0b">Threshold 0.85</text>
+<path d="M176,334 h230.525 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-230.525 z" fill="#2a78d6"/>
+<text x="418.525" y="349" font-size="14" font-weight="600" fill="#0b0b0b">3.75 s</text>
+<text x="20" y="385" font-size="14" font-weight="400" fill="#0b0b0b">Threshold 0.75</text>
+<path d="M176,370 h184.09375 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-184.09375 z" fill="#2a78d6"/>
+<text x="372.09375" y="385" font-size="14" font-weight="600" fill="#0b0b0b">3.01 s</text>
+<text x="20" y="421" font-size="14" font-weight="400" fill="#0b0b0b">Threshold 0.65</text>
+<path d="M176,406 h14.21875 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-14.21875 z" fill="#2a78d6"/>
+<text x="202.21875" y="421" font-size="14" font-weight="600" fill="#0b0b0b">0.29 s</text>
+<text x="20" y="457" font-size="14" font-weight="400" fill="#0b0b0b">0.65, repeat run</text>
+<path d="M176,442 h15.2625 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-15.2625 z" fill="#2a78d6"/>
+<text x="203.2625" y="457" font-size="14" font-weight="600" fill="#0b0b0b">0.31 s</text>
+<text x="20" y="512" font-size="15" font-weight="700" fill="#0b0b0b">Prompt processed in under 1 s</text>
+<text x="20" y="530" font-size="12" font-weight="400" fill="#898781">share of requests, higher is better</text>
+<line x1="176" y1="542" x2="176" y2="770" stroke="#c3c2b7" stroke-width="1"/>
+<text x="20" y="563" font-size="14" font-weight="400" fill="#0b0b0b">No cache, run 1</text>
+<path d="M176,548 h43.5 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-43.5 z" fill="#898781"/>
+<text x="231.5" y="563" font-size="14" font-weight="600" fill="#0b0b0b">19%</text>
+<text x="20" y="599" font-size="14" font-weight="400" fill="#0b0b0b">No cache, run 2</text>
+<path d="M176,584 h43.5 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-43.5 z" fill="#898781"/>
+<text x="231.5" y="599" font-size="14" font-weight="600" fill="#0b0b0b">19%</text>
+<text x="20" y="647" font-size="14" font-weight="400" fill="#0b0b0b">Threshold 0.85</text>
+<path d="M176,632 h61 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-61 z" fill="#2a78d6"/>
+<text x="249" y="647" font-size="14" font-weight="600" fill="#0b0b0b">26%</text>
+<text x="20" y="683" font-size="14" font-weight="400" fill="#0b0b0b">Threshold 0.75</text>
+<path d="M176,668 h98.5 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-98.5 z" fill="#2a78d6"/>
+<text x="286.5" y="683" font-size="14" font-weight="600" fill="#0b0b0b">41%</text>
+<text x="20" y="719" font-size="14" font-weight="400" fill="#0b0b0b">Threshold 0.65</text>
+<path d="M176,704 h133.5 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-133.5 z" fill="#2a78d6"/>
+<text x="321.5" y="719" font-size="14" font-weight="600" fill="#0b0b0b">55%</text>
+<text x="20" y="755" font-size="14" font-weight="400" fill="#0b0b0b">0.65, repeat run</text>
+<path d="M176,740 h133.5 a4,4 0 0 1 4,4 v12 a4,4 0 0 1 -4,4 h-133.5 z" fill="#2a78d6"/>
+<text x="321.5" y="755" font-size="14" font-weight="600" fill="#0b0b0b">55%</text>
+<text x="20" y="808" font-size="11" font-weight="400" fill="#898781">Source: runs/ret-*.jsonl, drawn by scripts/chart-retrieval.ts. Each run is 100 requests.</text>
+</svg>
