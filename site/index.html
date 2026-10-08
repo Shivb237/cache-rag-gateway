@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cache lab: replay of real requests</title>
+<meta name="description" content="Replay 201 real requests through a cache-aware RAG gateway and see which cache layer answered, how long it took and what it cost.">
+<style>
+:root{
+  --bg:#f6f5f1; --card:#ffffff; --ink:#1b1d21; --muted:#5d636d; --line:#dcdad2;
+  --model:#5f6773; --exact:#16774f; --semantic:#2f6fe4; --wrong:#c42f1a; --accent:#2f6fe4; --on:#ffffff;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#14161a; --card:#1c1f25; --ink:#eceae4; --muted:#9aa0aa; --line:#2e323a;
+    --model:#9ba2ad; --exact:#3fc592; --semantic:#6a9bff; --wrong:#ff7a68; --accent:#6a9bff; --on:#0e1013;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#14161a; --card:#1c1f25; --ink:#eceae4; --muted:#9aa0aa; --line:#2e323a;
+  --model:#9ba2ad; --exact:#3fc592; --semantic:#6a9bff; --wrong:#ff7a68; --accent:#6a9bff; --on:#0e1013;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:980px;margin:0 auto;padding:32px 16px 64px}
+h1{font-size:clamp(1.6rem,4vw,2.3rem);line-height:1.15;margin:0 0 8px;letter-spacing:-.02em}
+h2{font-size:1.25rem;margin:40px 0 12px}
+p{margin:0 0 12px}
+a{color:var(--accent)}
+.lede{color:var(--muted);max-width:68ch}
+.badge{display:inline-block;font-size:.78rem;padding:2px 9px;border:1px solid var(--line);border-radius:99px;color:var(--muted);background:var(--card)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.grid{display:grid;gap:12px}
+.stats{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.stat b{display:block;font-size:1.5rem;letter-spacing:-.02em}
+.stat span{color:var(--muted);font-size:.85rem}
+button,select{font:inherit;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 14px;cursor:pointer}
+button:hover,select:hover{border-color:var(--accent)}
+button.primary{background:var(--accent);border-color:var(--accent);color:var(--on)}
+button:focus-visible,select:focus-visible,input:focus-visible,.cell:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.armrow{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.armrow button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--on)}
+#strip{display:flex;flex-wrap:wrap;gap:2px;margin:14px 0}
+.cell{width:11px;height:18px;border-radius:3px;background:var(--line);border:0;padding:0}
+.cell.model{background:var(--model)} .cell.exact{background:var(--exact)} .cell.semantic{background:var(--semantic)}
+.cell.wrong{background:var(--wrong)}
+.cell.future{opacity:.28}
+.cell.now{outline:2px solid var(--ink);outline-offset:1px}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:.85rem;color:var(--muted)}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+#now h3{margin:6px 0 4px;font-size:1.25rem;line-height:1.3}
+.tag{display:inline-block;font-size:.8rem;padding:2px 10px;border-radius:99px;color:var(--on);font-weight:600}
+.tag.model{background:var(--model)} .tag.exact{background:var(--exact)} .tag.semantic{background:var(--semantic)}
+.tag.wrong{background:var(--wrong)}
+.kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:12px}
+.kv div{border-top:1px solid var(--line);padding-top:8px}
+.kv small{display:block;color:var(--muted)}
+.mono{font-family:var(--mono)}
+#log{margin:0;padding:0;list-style:none;font-size:.9rem}
+#log li{display:grid;grid-template-columns:3.2rem 1fr auto;gap:10px;padding:7px 0;border-top:1px solid var(--line)}
+#log li span:last-child{color:var(--muted);font-family:var(--mono);white-space:nowrap}
+.bars{display:grid;gap:10px}
+.bar{display:grid;grid-template-columns:minmax(96px,150px) 1fr 5.5rem;gap:10px;align-items:center;font-size:.9rem}
+.bar .track{background:var(--line);border-radius:6px;height:16px;overflow:hidden}
+.bar .fill{height:100%;background:var(--accent);border-radius:6px}
+.bar .val{font-family:var(--mono);text-align:right}
+.charts{grid-template-columns:repeat(auto-fit,minmax(min(420px,100%),1fr))}
+.note{color:var(--muted);font-size:.9rem}
+#live{display:none}
+input[type=text],input[type=password]{font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:8px 12px;width:100%}
+footer{margin-top:48px;color:var(--muted);font-size:.9rem}
+.sr{position:absolute;left:-9999px}
+@media (max-width:560px){.bar{grid-template-columns:90px 1fr 4.5rem}.cell{width:9px}}
+</style>
+</head>
+<body>
+<main>
+  <span class="badge" id="mode">Replay of logged runs</span>
+  <h1>Which cache answered, and what did it cost?</h1>
+  <p class="lede">This replays 201 <b>real</b> requests from a measured run of a RAG gateway on Claude Sonnet 5.5 (first of 3 repetitions). Every request was sent to all arms in a random order, so the arms are comparable. Nothing here is simulated: the latency, cost and answers are the logged values. <a href="https://github.com/Shivb237/cache-rag-gateway">Code and logs</a>.</p>
+
+  <section aria-labelledby="h-replay">
+    <h2 id="h-replay">Replay</h2>
+    <div class="card">
+      <div class="row"><b>Cache setup:</b></div>
+      <div class="armrow" id="arms" role="group" aria-label="Cache setup"></div>
+      <p class="note" id="armnote"></p>
+
+      <div class="row">
+        <button class="primary" id="play">Play</button>
+        <button id="step">Step</button>
+        <button id="reset">Restart</button>
+        <label>Speed
+          <select id="speed"><option value="500">Slow</option><option value="160" selected>Normal</option><option value="40">Fast</option></select>
+        </label>
+        <span class="note" id="pos"></span>
+      </div>
+
+      <div id="strip" role="list" aria-label="One cell per request. Click a cell to jump there."></div>
+      <div class="legend">
+        <span><i style="background:var(--model)"></i>Model call</span>
+        <span><i style="background:var(--exact)"></i>Exact cache</span>
+        <span><i style="background:var(--semantic)"></i>Semantic cache</span>
+        <span><i style="background:var(--wrong)"></i>Wrong answer served from cache</span>
+      </div>
+    </div>
+
+    <div class="card" id="now" style="margin-top:12px" aria-live="polite"></div>
+
+    <div class="grid stats" style="margin-top:12px" id="stats"></div>
+
+    <div class="card" style="margin-top:12px">
+      <b>Last requests</b>
+      <ul id="log"></ul>
+    </div>
+  </section>
+
+  <section id="live" aria-labelledby="h-live">
+    <h2 id="h-live">Live: ask the running gateway</h2>
+    <div class="card">
+      <p class="note">This page is being served by the gateway itself, so this box sends real requests (they use the API budget). The key is only kept in this tab.</p>
+      <div class="grid" style="gap:10px">
+        <input type="password" id="lkey" placeholder="x-api-key (if the gateway requires one)" autocomplete="off">
+        <input type="text" id="lq" value="Who was the NFL Commissioner in early 2012?" maxlength="500">
+        <div class="row"><button class="primary" id="lask">Ask</button><span class="note" id="lstat"></span></div>
+        <div id="lout" aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-res">
+    <h2 id="h-res">Results for the whole run (median of 3 repetitions)</h2>
+    <p class="note">Same 201 requests per repetition. "none-twin" is an identical copy of "none": the gap between them is the noise floor, so differences smaller than that mean nothing.</p>
+    <div class="grid charts" id="charts"></div>
+  </section>
+
+  <footer>
+    <p>Setup: seeded subset of SQuAD v1.1 dev, local embeddings (bge-small), top-5 retrieval, semantic threshold 0.90. Workload: 60 new questions, 60 paraphrases, 36 near-misses from the same paragraph, 15 questions from other articles, 30 exact repeats. "Wrong answer served" means a cache returned an answer that does not match the gold answer of the question actually asked. Data: SQuAD (CC BY-SA 4.0).</p>
+    <p><button id="theme">Toggle dark / light</button></p>
+  </footer>
+</main>
+
+<script>
+(function(){
+  "use strict";
+  var KIND = { original:"New question", repeat:"Exact repeat", paraphrase:"Paraphrase of an earlier question", hard:"Near-miss: same paragraph, different question", easy:"Unrelated question from another article" };
+  var ARM_NOTE = {
+    "none":"No caches. Every request calls the model (the control).",
+    "exact":"Exact-match cache only.",
+    "semantic":"Semantic cache only (embedding similarity, threshold 0.90).",
+    "exact+semantic":"Exact and semantic caches together.",
+    "retrieval":"Retrieval cache only: reuses the passages of a similar earlier question. It never answers by itself, so every request still calls the model.",
+    "all":"All layers: exact, semantic, retrieval and Claude prompt caching."
+  };
+  var data, arm = "all", pos = 0, timer = null;
+  var $ = function(id){ return document.getElementById(id); };
+  var money = function(n){ return "$" + n.toFixed(n < 0.1 ? 4 : 3); };
+  var el = function(tag, cls, txt){ var e=document.createElement(tag); if(cls) e.className=cls; if(txt!=null) e.textContent=txt; return e; };
+
+  function cls(r){ return r.wrong ? "wrong" : (r.layer === "exact" ? "exact" : r.layer === "semantic" ? "semantic" : "model"); }
+  function layerName(r){ return r.layer === "exact" ? "Exact cache" : r.layer === "semantic" ? "Semantic cache" : "Model call"; }
+
+  function upTo(n){
+    var s = { hits:0, wrong:0, cost:0, base:0, ms:0, refused:0 };
+    for (var i=0;i<n;i++){
+      var it = data.items[i], r = it.arms[arm], b = it.arms["none"];
+      if (r.layer) s.hits++;
+      if (r.wrong) s.wrong++;
+      if (r.refused) s.refused++;
+      s.cost += r.cost; s.base += b.cost; s.ms += r.ms;
+    }
+    return s;
+  }
+
+  function build(){
+    var armsBox = $("arms");
+    data.source.arms.filter(function(a){ return a !== "none-twin"; }).forEach(function(a){
+      var b = el("button", "", a); b.type="button"; b.setAttribute("aria-pressed", a===arm ? "true":"false");
+      b.addEventListener("click", function(){ arm = a; refreshArms(); render(); });
+      armsBox.appendChild(b);
+    });
+    var strip = $("strip");
+    data.items.forEach(function(it, i){
+      var c = el("button", "cell"); c.type="button"; c.setAttribute("role","listitem");
+      c.setAttribute("aria-label","Request " + (i+1));
+      c.addEventListener("click", function(){ stop(); pos = i+1; render(); });
+      strip.appendChild(c);
+    });
+    refreshArms();
+  }
+  function refreshArms(){
+    Array.prototype.forEach.call($("arms").children, function(b){ b.setAttribute("aria-pressed", b.textContent===arm ? "true":"false"); });
+    $("armnote").textContent = ARM_NOTE[arm] || "";
+  }
+
+  function render(){
+    var n = data.items.length;
+    // strip
+    var cells = $("strip").children;
+    for (var i=0;i<n;i++){
+      var r = data.items[i].arms[arm];
+      cells[i].className = "cell " + cls(r) + (i >= pos ? " future" : "") + (i === pos-1 ? " now" : "");
+    }
+    $("pos").textContent = pos + " / " + n;
+    $("play").textContent = timer ? "Pause" : (pos >= n ? "Replay" : "Play");
+
+    // current
+    var now = $("now"); now.textContent = "";
+    if (pos === 0){
+      now.appendChild(el("p","note","Press Play or Step. Each request shows which layer answered, how long it took and what it cost."));
+    } else {
+      var it = data.items[pos-1], r = it.arms[arm];
+      var head = el("div","row");
+      var t = el("span","tag " + cls(r), r.wrong ? layerName(r) + ": wrong answer" : layerName(r));
+      head.appendChild(t); head.appendChild(el("span","badge", KIND[it.kind] || it.kind));
+      now.appendChild(head);
+      now.appendChild(el("h3","", it.question));
+      var kv = el("div","kv");
+      function add(k, v, mono){ var d=el("div"); d.appendChild(el("small","",k)); d.appendChild(el("span", mono?"mono":"", v)); kv.appendChild(d); }
+      add("Answer served", r.refused ? "(model refused)" : r.answer);
+      add("Gold answer", it.gold);
+      add("Time", Math.round(r.ms) + " ms", true);
+      add("Cost", r.cost === 0 ? "$0" : money(r.cost), true);
+      now.appendChild(kv);
+    }
+
+    // stats
+    var s = upTo(pos), box = $("stats"); box.textContent = "";
+    function stat(v, label){ var d=el("div","card stat"); d.appendChild(el("b","",v)); d.appendChild(el("span","",label)); box.appendChild(d); }
+    stat(String(pos), "requests so far");
+    stat(pos ? Math.round(100*s.hits/pos) + "%" : "0%", "answered from cache");
+    stat(money(s.cost), "cost so far");
+    stat(pos && s.base ? (s.cost <= s.base ? "-" : "+") + Math.abs(Math.round(100*(s.cost-s.base)/s.base)) + "%" : "0%", "cost vs no caches (" + money(s.base) + ")");
+    stat(String(s.wrong), "wrong answers served by a cache");
+
+    // log
+    var ul = $("log"); ul.textContent = "";
+    for (var k=pos-1; k>=Math.max(0,pos-6); k--){
+      var q = data.items[k], rr = q.arms[arm];
+      var li = el("li");
+      li.appendChild(el("span","tag " + cls(rr), rr.layer === "exact" ? "exact" : rr.layer === "semantic" ? "sem." : "model"));
+      li.appendChild(el("span","", q.question));
+      li.appendChild(el("span","", Math.round(rr.ms) + " ms"));
+      ul.appendChild(li);
+    }
+  }
+
+  function tick(){ if (pos >= data.items.length){ stop(); render(); return; } pos++; render(); }
+  function play(){ if (timer){ stop(); render(); return; } if (pos >= data.items.length) pos = 0; timer = setInterval(tick, Number($("speed").value)); render(); }
+  function stop(){ if (timer){ clearInterval(timer); timer = null; } }
+
+  function charts(){
+    var agg = data.aggregate, order = ["none","none-twin","exact","semantic","exact+semantic","retrieval","all"].filter(function(a){ return agg[a]; });
+    var specs = [
+      { title:"Cost per 201 requests", f:function(a){ return agg[a].costUsd.median; }, fmt:function(v){ return money(v); } },
+      { title:"Answered from cache", f:function(a){ return agg[a].hitRate.median; }, fmt:function(v){ return Math.round(v*100) + "%"; }, max:1 },
+      { title:"Median latency (ms)", f:function(a){ return agg[a].latencyP50.median; }, fmt:function(v){ return Math.round(v) + " ms"; } },
+      { title:"Wrong answers served by a cache", f:function(a){ return agg[a].wrongServed.median; }, fmt:function(v){ return String(v); } }
+    ];
+    var box = $("charts");
+    specs.forEach(function(sp){
+      var c = el("div","card"); c.appendChild(el("b","",sp.title));
+      var vals = order.map(sp.f), max = sp.max || Math.max.apply(null, vals) || 1;
+      var bars = el("div","bars"); bars.style.marginTop = "12px";
+      order.forEach(function(a, i){
+        var b = el("div","bar"); b.appendChild(el("span","",a));
+        var tr = el("div","track"), fl = el("div","fill"); fl.style.width = Math.max(1, 100*vals[i]/max) + "%"; tr.appendChild(fl); b.appendChild(tr);
+        b.appendChild(el("span","val", sp.fmt(vals[i]))); bars.appendChild(b);
+      });
+      c.appendChild(bars); box.appendChild(c);
+    });
+  }
+
+  function live(){
+    fetch("/health").then(function(r){ return r.ok ? r.json() : Promise.reject(); }).then(function(h){
+      if (!h || typeof h !== "object") return;
+      $("live").style.display = "block"; $("mode").textContent = "Live gateway + replay of logged runs";
+      $("lask").addEventListener("click", function(){
+        var out = $("lout"), st = $("lstat"); out.textContent = ""; st.textContent = "Asking...";
+        var headers = { "content-type":"application/json" }; var key = $("lkey").value; if (key) headers["x-api-key"] = key;
+        fetch("/ask", { method:"POST", headers:headers, body:JSON.stringify({ question:$("lq").value }) })
+          .then(function(r){ return r.json().then(function(j){ return { ok:r.ok, status:r.status, j:j }; }); })
+          .then(function(x){
+            if (!x.ok){ st.textContent = "Error " + x.status + (x.status === 401 ? " (key missing or wrong)" : ""); return; }
+            st.textContent = "";
+            var j = x.j, lay = j.cacheLayer === "exact" ? "Exact cache" : j.cacheLayer === "semantic" ? "Semantic cache" : "Model call";
+            var line = el("p"); var t = el("span","tag " + (j.cacheLayer || "model"), lay); line.appendChild(t);
+            line.appendChild(document.createTextNode("  " + Math.round(j.latencyMs) + " ms, " + (j.costUsd === 0 ? "$0" : money(j.costUsd))));
+            out.appendChild(line); out.appendChild(el("p","", j.refused ? "(the model refused)" : j.answer));
+          }).catch(function(){ st.textContent = "Request failed"; });
+      });
+    }).catch(function(){});
+  }
+
+  $("play").addEventListener("click", play);
+  $("step").addEventListener("click", function(){ stop(); if (pos < data.items.length) pos++; render(); });
+  $("reset").addEventListener("click", function(){ stop(); pos = 0; render(); });
+  $("speed").addEventListener("change", function(){ if (timer){ stop(); play(); } });
+  $("theme").addEventListener("click", function(){
+    var root = document.documentElement, dark = root.getAttribute("data-theme") === "dark" || (!root.getAttribute("data-theme") && matchMedia("(prefers-color-scheme: dark)").matches);
+    root.setAttribute("data-theme", dark ? "light" : "dark");
+  });
+
+  fetch("replay.json").then(function(r){ return r.json(); }).then(function(d){ data = d; build(); charts(); render(); live(); })
+    .catch(function(){ $("now").textContent = "Could not load replay.json. Serve this folder over HTTP (for example: npx serve site)."; });
+})();
+</script>
+</body>
+</html>

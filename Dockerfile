@@ -18,6 +18,7 @@ COPY --chown=node:node configs ./configs
 COPY --chown=node:node src ./src
 COPY --chown=node:node scripts ./scripts
 COPY --chown=node:node data/eval ./data/eval
+COPY --chown=node:node site ./site
 
 # Build the vector index and download the embedding model into the image, so the container starts fast and needs no
 # model download at runtime. Secrets are NOT baked in: they are passed as environment variables when it runs.

@@ -1,4 +1,7 @@
+import { mkdtempSync, writeFileSync } from "node:fs";
 import type { AddressInfo } from "node:net";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
 import { afterEach, describe, expect, it } from "vitest";
 import type { Pipeline, PipelineResult } from "../src/pipeline.js";
 import { createApp } from "../src/server.js";
@@ -10,8 +13,8 @@ const result = (o: Partial<PipelineResult> = {}): PipelineResult => ({
 
 let close: (() => void) | undefined;
 afterEach(() => close?.());
-async function start(pipeline: Pipeline, apiKey?: string) {
-  const app = createApp({ pipeline, model: "fake-model", indexedParagraphs: 500, spentUsd: () => 0.0123, apiKey });
+async function start(pipeline: Pipeline, apiKey?: string, siteDir?: string) {
+  const app = createApp({ pipeline, model: "fake-model", indexedParagraphs: 500, spentUsd: () => 0.0123, apiKey, siteDir });
   const server = app.listen(0);
   close = () => server.close();
   const base = `http://127.0.0.1:${(server.address() as AddressInfo).port}`;
@@ -70,5 +73,21 @@ describe("gateway server", () => {
     expect(s).toMatchObject({ requests: 3, modelCalls: 1, semanticHits: 2, exactHits: 0, spentUsd: 0.0123 });
     expect(s.cacheHitRate).toBeCloseTo(2 / 3);
     expect(s.latencyMs.samples).toBe(3);
+  });
+  it("serves the demo page at / without a key, and the API routes still win", async () => {
+    const dir = mkdtempSync(join(tmpdir(), "site-"));
+    writeFileSync(join(dir, "index.html"), "<h1>demo</h1>");
+    writeFileSync(join(dir, "health"), "a file that must not shadow the route");
+    const { base, post } = await start(async () => result(), "secret", dir);
+    const page = await fetch(`${base}/`);
+    expect(page.status).toBe(200);
+    expect(await page.text()).toContain("demo");
+    expect(await (await fetch(`${base}/health`)).json()).toMatchObject({ ok: true });
+    expect((await post({ question: "q" })).status).toBe(401);
+    expect((await fetch(`${base}/stats`)).status).toBe(401);
+  });
+  it("serves no pages when no site folder is given", async () => {
+    const { base } = await start(async () => result());
+    expect((await fetch(`${base}/`)).status).toBe(404);
   });
 });

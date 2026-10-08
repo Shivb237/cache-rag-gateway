@@ -16,6 +16,8 @@ flowchart LR
   M --> A
 ```
 
+**Demo:** [replay 201 real requests](https://shivb237.github.io/cache-rag-gateway/) and see which layer answered, the latency and the cost, for each cache setup. The page replays logged values from [`runs/ablation-claude.jsonl`](runs/ablation-claude.jsonl) (`npm run replay` rebuilds its data and fails if it does not match the log). Served by the gateway itself (`npm run serve`), the same page also has a box that sends live requests.
+
 ## What I found
 
 | Layer | What it saved | What it cost |
@@ -73,7 +75,7 @@ Noise: the control and its identical copy differed by 2.8% in median latency and
 Needs Node 24 and [Ollama](https://ollama.com).
 
 ```bash
-npm install
+npm ci                               # installs the exact versions in package-lock.json
 ollama pull qwen3:4b-instruct
 npm run index                        # embeds the 500 paragraphs locally (downloads bge-small, about 130 MB, once)
 npm run eval -- --name baseline      # 200 questions, no caches; writes runs/baseline.jsonl + .summary.json
@@ -96,6 +98,8 @@ docker build --platform linux/arm64 -t cache-rag-gateway .
 docker run --rm -p 8080:8080 --env-file .env -e GATEWAY_API_KEY=local-test -e SPEND_CAP_USD=1 cache-rag-gateway
 ```
 
+Open `http://localhost:8080/` for the demo page (replay, plus live requests while the gateway runs). The page is public; `/ask` and `/stats` are not.
+
 Set `GATEWAY_API_KEY` to require an `x-api-key` header on `/ask` and `/stats` (without it the service warns that it is open), and `SPEND_CAP_USD` to cap what it may spend.
 
 The seeded subset and the generated paraphrases are committed. To rebuild the subset from the raw dataset (public, CC BY-SA 4.0, 4.9 MB):
@@ -115,7 +119,7 @@ npm run staleness -- --name my-staleness --k 30                    # stale answe
 
 To use Claude instead of the local model, put `ANTHROPIC_API_KEY` in `.env` (see `.env.example`; it is gitignored) and add `--override configs/providers/claude_sonnet.yaml`. The config carries a hard spend cap; 200 questions cost about $0.60.
 
-Any model can be plugged in through the provider interface in [`src/providers/`](src/providers/): Ollama, Anthropic, any OpenAI-compatible server (LM Studio, vLLM, OpenRouter...), or your own `registerProvider(...)`.
+Any model can be plugged in through the provider interface in [`src/providers/`](src/providers/): Ollama, Anthropic, any OpenAI-compatible server (LM Studio, vLLM, OpenRouter...), or your own `registerProvider(...)`. [`configs/providers/`](configs/providers/) has example configs for LM Studio and OpenRouter; they were not used for any result here.
 
 ## Deployed on AWS (ECS Fargate)
 
@@ -141,9 +145,10 @@ src/rag/          squad loader, seeded subset, vector index, prompt
 src/eval/         metrics, workloads, arms, stats, staleness, report
 src/serve.ts      the HTTP service (src/server.ts: /ask, /health, /stats, API key)
 eval/             run.ts, ablation.ts, staleness.ts      the runners
-scripts/          probes, analyses, report builder, live monitors
-configs/          base config, provider and ablation overrides
-runs/             logged results (JSONL per request, summary JSON per run)
+scripts/          probes, analyses, experiment scripts (run-*.sh), report builder, live monitors
+configs/          base.yaml; providers/ (model choice); ablations/ (one-cache-on/off overrides for eval/run.ts); ablation/ (arm matrices for eval/ablation.ts)
+runs/             logged results (JSONL per request, summary JSON per run); see runs/README.md
+site/             the demo page and its data (replay.json, built by npm run replay)
 reports/          generated HTML reports
 ```
 
@@ -155,6 +160,7 @@ reports/          generated HTML reports
 - Claude is not repeatable and, as the most capable setup, was measured with three repetitions at most. A first control arm in the prefix-cache runs on the local model was contaminated by an earlier test (its first 10 requests), and the analysis excludes those.
 - `runs/claude-baseline-a.jsonl` has no summary file: its summary step crashed on a bug (since fixed) after all 200 answers were written, so its numbers here come from the rows themselves.
 - All local numbers come from one MacBook Air (Apple M4, 16 GB) running Ollama 0.35.1.
+- The experiments and the local test runs used Node 25.9.0 (recorded in each run summary). `.nvmrc`, `engines` and the Dockerfile target Node 24; the container, which runs on 24, served the AWS test above. The experiments were not rerun on 24.
 
 ## License
 

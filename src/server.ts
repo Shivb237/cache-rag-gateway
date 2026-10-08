@@ -9,6 +9,7 @@ export interface ServerDeps {
   indexedParagraphs: number;
   spentUsd: () => number;
   apiKey?: string; // when set, /ask and /stats require this key in the x-api-key header
+  siteDir?: string; // when set, the files in this folder (the demo page) are served at / after the API routes
 }
 
 const MAX_QUESTION_CHARS = 500;
@@ -76,6 +77,9 @@ export function createApp(deps: ServerDeps) {
       spentUsd: Number(deps.spentUsd().toFixed(4)),
     });
   });
+
+  // The demo page is public (static files, no model call). It comes after the API routes so they always win.
+  if (deps.siteDir) app.use(express.static(deps.siteDir));
 
   // Bad JSON and oversized bodies come here and get a JSON answer instead of an HTML error page.
   const onError: ErrorRequestHandler = (err, _req, res, _next) => {

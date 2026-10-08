@@ -17,7 +17,8 @@
     "watch": "tsx scripts/watch-run.ts",
     "ablation": "tsx eval/ablation.ts",
     "staleness": "tsx eval/staleness.ts",
-    "serve": "tsx src/serve.ts"
+    "serve": "tsx src/serve.ts",
+    "replay": "tsx scripts/export-replay.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "0.131.0",

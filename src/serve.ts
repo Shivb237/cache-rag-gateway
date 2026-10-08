@@ -1,6 +1,7 @@
 // Starts the gateway as an HTTP service.
 // Local:  npm run serve                      (uses configs/base.yaml, the local model)
 // Cloud:  CONFIG_OVERRIDE=configs/providers/claude_sonnet.yaml GATEWAY_API_KEY=... ANTHROPIC_API_KEY=... npm run serve
+import { existsSync } from "node:fs";
 import { loadConfig } from "./config.js";
 import { createEmbedder } from "./embed.js";
 import { buildArm, type ArmSpec } from "./eval/arms.js";
@@ -31,7 +32,8 @@ const { pipeline } = buildArm(config, spec, { embed, llm, index, paragraphs: new
 
 const apiKey = process.env.GATEWAY_API_KEY;
 if (!apiKey) console.warn("WARNING: GATEWAY_API_KEY is not set, so /ask and /stats are open to anyone who can reach this port.");
-const app = createApp({ pipeline: withRetries(pipeline), model: config.llm.model, indexedParagraphs: index.meta.count, spentUsd: llm.spentUsd, apiKey });
+const siteDir = existsSync("site/index.html") ? "site" : undefined; // the demo page, served at / when the folder is there
+const app = createApp({ pipeline: withRetries(pipeline), model: config.llm.model, indexedParagraphs: index.meta.count, spentUsd: llm.spentUsd, apiKey, siteDir });
 
 const port = Number(process.env.PORT ?? 8080);
 app.listen(port, "0.0.0.0", () => {

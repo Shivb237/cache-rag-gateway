@@ -30,3 +30,6 @@ runs/smoke*
 
 # reports built from smoke runs
 reports/smoke*
+
+# Claude Code local config
+.claude/
