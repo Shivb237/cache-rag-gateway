@@ -4,17 +4,7 @@
 
 A small RAG gateway where every cache layer can be switched on or off, plus an evaluation harness that measures cost, latency, answer quality, wrong answers served and staleness against SQuAD gold answers. All results come from real runs logged in [`runs/`](runs/), on a local 4B model (Ollama) and on Claude Sonnet 5.5.
 
-```mermaid
-flowchart LR
-  Q[question] --> E{exact cache}
-  E -- hit --> A[answer]
-  E -- miss --> S{semantic cache}
-  S -- hit --> A
-  S -- miss --> R[embed + retrieve top-k<br/>optional retrieval cache]
-  R --> P[prompt: instruction, passages, question<br/>optional provider prompt cache]
-  P --> M[(LLM)]
-  M --> A
-```
+<img width="8191" alt="cache-rag-flow" src="https://github.com/user-attachments/assets/4f818c95-989a-42c0-a498-02ededfe6181" />
 
 **Demo:** [replay 201 real requests](https://shivb237.github.io/cache-rag-gateway/) and see which layer answered, the latency and the cost, for each cache setup. The page replays logged values from [`runs/ablation-claude.jsonl`](runs/ablation-claude.jsonl) (`npm run replay` rebuilds its data and fails if it does not match the log). Served by the gateway itself (`npm run serve`), the same page also has a box that sends live requests.
 
@@ -27,6 +17,8 @@ flowchart LR
 | **Retrieval cache** (keyed on query similarity) | Makes the passage block repeat, which is what lets prompt caching work. Locally: requests with a nearly fully cached prompt rose from 19% to 55%. | Accuracy: a question borrows a similar question's passages. F1 fell 0.014 locally (0.740 to 0.726) and about 0.02-0.03 on Claude. |
 | **Prompt / prefix cache** | **Local:** prompt time down 30-39%; median first-token time about 3-4 s to about 0.3 s when combined with the retrieval cache. | **Claude:** caching raised cost 18% with relevance-ordered passages and 20-25% on a diverse workload (cache writes cost 25% extra). Only with the retrieval cache did it pay: **23% cheaper**. It did **not** improve latency. |
 | **Invalidation by data version** | Stale answers 29 of 30 (97%) without it, **0 of 30** with it. | Cached answers are discarded on every data change. |
+
+<img height="8191" alt="Cache aware RAG Gateway Replay" src="https://github.com/user-attachments/assets/a5b884f7-0613-4166-a689-0238053abc11" />
 
 Three takeaways:
 
